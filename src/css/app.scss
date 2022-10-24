@@ -1,1 +1,28 @@
-// app global css in SCSS form
+@import "quasar/button.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: black !important;
+  text-decoration: none !important;
+}
+
+
+.limiter {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.logo-text {
+  font-weight: 700;
+  text-decoration: none;
+}
