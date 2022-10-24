@@ -34,6 +34,7 @@ export default {
 .header{
   width: 100%;
   position: fixed;
+  background-color: white;
 }
 .limiter{
   display: flex;

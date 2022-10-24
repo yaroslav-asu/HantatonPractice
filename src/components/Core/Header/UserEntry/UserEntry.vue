@@ -29,7 +29,7 @@ export default {
   name: "UserEntry",
   data() {
     return {
-      isLoggedIn: true,
+      isLoggedIn: false,
       userAccount: "asdf"
     };
   }
