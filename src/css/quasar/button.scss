@@ -1,5 +1,11 @@
 .button {
-  .q-focus-helper{
+  border-radius: 10px;
+  .q-focus-helper {
     display: none;
+  }
+
+  &:before {
+    box-shadow: none;
+
   }
 }

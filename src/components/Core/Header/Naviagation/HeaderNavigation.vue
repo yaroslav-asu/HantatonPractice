@@ -23,6 +23,6 @@ export default {
 
 <style lang="scss" scoped>
 .header-link{
-  margin-right: 40px;
+  margin-right: 60px;
 }
 </style>
