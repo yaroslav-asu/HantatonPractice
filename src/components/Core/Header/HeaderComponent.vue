@@ -29,7 +29,7 @@ export default {
     HeaderNavigation,
     UserEntry
   },
-  data(){
+  data() {
     return {
       pages: {
         home: {
@@ -49,28 +49,31 @@ export default {
           link: "/team"
         }
       }
-    }
+    };
   }
 };
 </script>
 
 <style lang="scss" scoped>
-.header{
+.header {
   width: 100%;
   position: fixed;
   background-color: white;
   z-index: 100;
 }
-.limiter{
+
+.limiter {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.logo-text{
+
+.logo-text {
   font-size: 1.5rem;
   margin-left: 10px !important;
 }
-.header__user-entry{
+
+.header__user-entry {
   margin-left: 100px;
 }
 </style>

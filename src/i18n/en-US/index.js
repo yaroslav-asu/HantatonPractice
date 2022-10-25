@@ -27,5 +27,19 @@ export default {
   },
   emailInput: {
     placeholder: "Type your email here"
+  },
+  servicePros: {
+    first: {
+      title: "Successful projects",
+      description: "We have been working for 5 years and have completed more than 100 projects.",
+    },
+    second: {
+      title: "Professional team",
+      description: "We have a team of professionals in the field of web development and design.",
+    },
+    third: {
+      title: "Affordable prices",
+      description: "We offer affordable prices for our services.",
+    }
   }
 };
