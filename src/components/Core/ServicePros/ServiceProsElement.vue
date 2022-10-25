@@ -1,18 +1,10 @@
 <template>
   <div class="service-pros-shower">
-    <div class="wrapper">
-      <q-icon
-        class="icon"
-        :name="serviceProsElement.icon"
-        :style="{
-          color: serviceProsElement.iconColor
-        }"
-      />
-    </div>
+
     <div class="text">
-      <p class="title">
+      <h4 class="title">
         {{ serviceProsElement.title }}
-      </p>
+      </h4>
       <p class="description">
         {{ serviceProsElement.description }}
       </p>
@@ -57,8 +49,6 @@ export default {
     color: $dark !important;
 
     .title {
-      font-size: 20px;
-      font-weight: 600;
       margin-bottom: 10px;
     }
 

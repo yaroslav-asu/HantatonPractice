@@ -35,7 +35,7 @@ export default {
   box-shadow: 5px 7px 200px -10px rgba(34, 60, 80, 0.2);
   //padding-bottom: 0;
   height: 70px;
-  padding: 0 10px;
+  padding: 0 10px 0 20px;
   width: 70%;
   display: flex;
   align-items: center;

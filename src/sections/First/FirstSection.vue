@@ -2,12 +2,12 @@
   <section class="section first-section">
     <div class="limiter flex items-center">
       <div class="text-part">
-        <p class="site-thematic">
+        <h1 class="site-thematic">
           {{ $t("firstSection.thematic") }}
-        </p>
-        <p class="site-description q-mb-xl">
+        </h1>
+        <h3 class="site-description q-mb-xl">
           {{ $t("firstSection.description") }}
-        </p>
+        </h3>
         <EmailInput></EmailInput>
       </div>
       <div class="images-part">
@@ -44,18 +44,8 @@ export default {
     width: 50%;
 
     .site-thematic {
-      font-size: 90px;
-      line-height: 100px;
-      font-weight: 500;
       white-space: pre;
       margin-bottom: 20px;
-    }
-
-
-    .site-description {
-      font-size: 30px;
-      font-weight: 400;
-      opacity: .7;
     }
   }
 

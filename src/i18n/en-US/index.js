@@ -21,6 +21,10 @@ export default {
   secondSection: {
     title: "A new site for your agency? It's here!",
   },
+  thirdSection: {
+    title: "Our functionality",
+    description: "We create websites that are easy to use and have a beautiful design.",
+  },
   errors: {
     required: "This field is required",
     email: "Invalid email",

@@ -2,9 +2,9 @@
   <section class="section second-section">
     <div class="limiter">
       <div class="text-part">
-        <p class="title">
+        <h2 class="title">
           {{ $t("secondSection.title") }}
-        </p>
+        </h2>
         <div class="pros">
           <ServiceProsElement
             v-for="el in servicePros"
@@ -20,7 +20,7 @@
         </div>
         <div class="photo-wrapper fake-photo" />
         <div class="help-data">
-
+<!--          <MacInterfaceBar/>-->
         </div>
       </div>
     </div>
@@ -34,7 +34,8 @@ import { ServiceProsClass } from "src/js/ServiceProsClass";
 export default {
   name: "SecondSection",
   components: {
-    ServiceProsElement
+    ServiceProsElement,
+    // MacInterfaceBar,
   },
   data() {
     return {
@@ -77,9 +78,6 @@ export default {
       width: 50%;
 
       .title {
-        font-size: 70px;
-        line-height: 90px;
-        font-weight: 400;
         margin-bottom: 60px;
       }
 
@@ -118,14 +116,15 @@ export default {
       }
 
       .fake-photo {
-        background-color: $dark;
+        background: rgb(206,75,245);
+        background: linear-gradient(30deg, rgba(206,75,245,1) 0%, rgba(254,245,155,1) 44%, rgba(245,72,112,1) 100%);
         z-index: 0;
         rotate: 2deg;
       }
       .help-data{
         width: 250px;
         height: 170px;
-        background-color: $light;
+        background-color: rgba($light, 0.53);
         position: absolute;
         border-radius: $border-radius;
         right: 0;
@@ -133,10 +132,11 @@ export default {
         translate: 0 50%;
         z-index: 2;
         box-shadow: $lite-shadow;
+        backdrop-filter: blur(4.5px);
+        -webkit-backdrop-filter: blur(4.5px);
       }
     }
   }
-
 }
 
 
