@@ -1,28 +1,36 @@
 <template>
   <nav class="header-navigation">
-    <router-link class="header-link" to="/">
-      {{ $t("header.navigation.home") }}
+    <router-link
+      v-for="page in pages"
+      :key="page.title"
+      class="header-link"
+      :to="page.link"
+    >
+      {{ $t(`header.navigation.${page.title}`) }}
     </router-link>
-    <router-link class="header-link" to="/">
-      {{ $t("header.navigation.portfolio") }}
-    </router-link>
-    <router-link class="header-link" to="/">
-      {{ $t("header.navigation.howItWorks") }}
-    </router-link>
-    <router-link class="header-link" to="/">
-      {{ $t("header.navigation.team") }}
-    </router-link>
+
   </nav>
 </template>
 
 <script>
 export default {
-  name: "HeaderNavigation"
+  name: "HeaderNavigation",
+  props: {
+    pages: {
+      type: Object,
+      required: true
+    }
+  }
 };
 </script>
 
 <style lang="scss" scoped>
-.header-link{
+.header-link {
   margin-right: 60px;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: $primary;
+  }
 }
 </style>

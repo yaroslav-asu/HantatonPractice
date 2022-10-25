@@ -2,7 +2,7 @@
   <q-layout>
     <HeaderComponent></HeaderComponent>
     <FirstSection></FirstSection>
-    <CompaniesSection></CompaniesSection>
+    <SecondSection></SecondSection>
   </q-layout>
 </template>
 
@@ -10,7 +10,7 @@
 import { defineComponent } from "vue";
 import FirstSection from "src/sections/First/FirstSection.vue";
 import HeaderComponent from "components/Core/Header/HeaderComponent";
-import CompaniesSection from "src/sections/CompaniesSection/CompaniesSection";
+import SecondSection from "src/sections/Second/SecondSection";
 
 
 export default defineComponent({
@@ -18,16 +18,14 @@ export default defineComponent({
   components: {
     HeaderComponent,
     FirstSection,
-    CompaniesSection,
+    SecondSection
   }
-
-
 });
 </script>
 
 <style lang="scss" scoped>
-  .first-section{
-    padding-top: 98px;
-    height: 100vh;
-  }
+.first-section {
+  padding-top: 98px;
+  height: 100vh;
+}
 </style>

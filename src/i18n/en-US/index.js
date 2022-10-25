@@ -18,6 +18,9 @@ export default {
     thematic: "Creative Design \n& Experience",
     description: "We are a team of professionals in the field of web development and design. We create websites."
   },
+  secondSection: {
+    title: "A new site for your agency? It's here!",
+  },
   errors: {
     required: "This field is required",
     email: "Invalid email",

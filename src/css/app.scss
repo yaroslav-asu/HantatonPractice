@@ -1,23 +1,26 @@
 @import "quasar/button.scss";
+@import "fonts.scss";
 
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Poppins', sans-serif;
 }
 
 p {
   margin: 0;
   padding: 0;
+  color: $text-color;
 }
 
 a {
-  color: black !important;
-  text-decoration: none !important;
+  text-decoration: none;
+  color: $text-color;
 }
 
 
 .limiter {
-  max-width: 1200px;
+  max-width: 1400px;
   width: 100%;
   margin: 0 auto;
 }

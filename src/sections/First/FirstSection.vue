@@ -10,39 +10,67 @@
         </p>
         <EmailInput></EmailInput>
       </div>
+      <div class="images-part">
+
+        <q-img
+          class="man-image"
+          src="../../assets/images/sittingMan.png"
+        />
+      </div>
     </div>
   </section>
 </template>
 
 <script>
 import EmailInput from "components/Core/EmailInput/EmailInput";
+
 export default {
   name: "FirstSection",
   components: {
-    EmailInput,
+    EmailInput
   }
-
 };
 </script>
 
 <style lang="scss" scoped>
-.limiter{
-  height: 100%;
+.first-section {
+  position: relative;
 }
-.text-part{
-  width: 70%;
-  .site-thematic {
-    font-size: 100px;
-    font-weight: 400;
-    white-space: pre;
+
+.limiter {
+  height: 100%;
+
+  .text-part {
+    width: 50%;
+
+    .site-thematic {
+      font-size: 60px;
+      line-height: 80px;
+      font-weight: 500;
+      white-space: pre;
+      margin-bottom: 20px;
+    }
+
+
+    .site-description {
+      font-size: 30px;
+      font-weight: 400;
+      opacity: .7;
+    }
   }
 
-  .site-description {
-    font-size: 40px;
-    font-weight: 400;
-    margin-top: 20px;
-    //white-space: pre;
+  .images-part {
+    width: 50%;
+
+    .man-image {
+      position: absolute;
+      bottom: 10px;
+      right: 0;
+      width: 58%;
+      z-index: 0;
+    }
   }
 }
+
 
 </style>

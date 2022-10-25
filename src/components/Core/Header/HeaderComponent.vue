@@ -1,5 +1,5 @@
 <template>
-  <header class="header q-py-lg">
+  <header class="header q-py-sm">
     <div class="limiter">
       <div class="logo flex items-center">
         <LogoImage />
@@ -8,7 +8,9 @@
         </p>
       </div>
       <div class="flex items-center">
-        <HeaderNavigation />
+        <HeaderNavigation
+          :pages="pages"
+        />
         <UserEntry class="header__user-entry"></UserEntry>
       </div>
     </div>
@@ -26,6 +28,28 @@ export default {
     LogoImage,
     HeaderNavigation,
     UserEntry
+  },
+  data(){
+    return {
+      pages: {
+        home: {
+          title: "home",
+          link: "/"
+        },
+        portfolio: {
+          title: "portfolio",
+          link: "/portfolio"
+        },
+        howItWorks: {
+          title: "howItWorks",
+          link: "/how-it-works"
+        },
+        team: {
+          title: "team",
+          link: "/team"
+        }
+      }
+    }
   }
 };
 </script>
@@ -35,6 +59,7 @@ export default {
   width: 100%;
   position: fixed;
   background-color: white;
+  z-index: 100;
 }
 .limiter{
   display: flex;
