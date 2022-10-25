@@ -45,7 +45,7 @@ export default {
     padding: 15px;
     background-color: $light;
     border-radius: 10px;
-    box-shadow: 0 0 100px 0 rgba($dark, 0.2);
+    box-shadow: $lite-shadow;
     margin-right: 30px;
 
     .icon {

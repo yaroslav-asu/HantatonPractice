@@ -13,25 +13,27 @@
             class="q-mb-lg"
           />
         </div>
-
       </div>
       <div class="photo-part">
-        <PhotoComponent class="first-photo" />
-        <PhotoComponent class="second-photo" />
+        <div class="photo-wrapper photo">
+          <q-img class="photo-wrapper__photo" src="../../assets/images/woman.jpg" />
+        </div>
+        <div class="photo-wrapper fake-photo" />
+        <div class="help-data">
+
+        </div>
       </div>
     </div>
   </section>
 </template>
 
 <script>
-import PhotoComponent from "components/Core/Photo/PhotoComponent";
 import ServiceProsElement from "components/Core/ServicePros/ServiceProsElement";
 import { ServiceProsClass } from "src/js/ServiceProsClass";
 
 export default {
   name: "SecondSection",
   components: {
-    PhotoComponent,
     ServiceProsElement
   },
   data() {
@@ -41,13 +43,13 @@ export default {
           icon: "inbox",
           iconColor: "#5149bf",
           title: this.$t("servicePros.first.title"),
-          description: this.$t("servicePros.first.description"),
+          description: this.$t("servicePros.first.description")
         }),
         new ServiceProsClass({
           icon: "visibility",
           iconColor: "#e42e57",
           title: this.$t("servicePros.second.title"),
-          description: this.$t("servicePros.second.description"),
+          description: this.$t("servicePros.second.description")
         }),
         new ServiceProsClass({
           icon: "favorite_border",
@@ -63,21 +65,79 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.text-part {
-  width: 50%;
+.second-section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
 
-  .title {
-    font-size: 70px;
-    line-height: 90px;
-    font-weight: 400;
-    margin-bottom: 60px;
-  }
-  .pros{
-    width: 100%;
+  .limiter {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    //padding-right: 30px;
+
+    .text-part {
+      width: 50%;
+
+      .title {
+        font-size: 70px;
+        line-height: 90px;
+        font-weight: 400;
+        margin-bottom: 60px;
+      }
+
+      .pros {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    .photo-part {
+      width: 50%;
+      position: relative;
+
+      .photo-wrapper {
+        width: 380px;
+        height: 480px;
+        border-radius: $border-radius;
+        overflow: hidden;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        translate: -50% -50%;
+        transform-origin: center center;
+
+        .photo-wrapper__photo {
+          height: 100%;
+        }
+      }
+
+      .photo {
+        z-index: 1;
+        rotate: -8deg;
+        box-shadow: $lite-shadow;
+      }
+
+      .fake-photo {
+        background-color: $dark;
+        z-index: 0;
+        rotate: 2deg;
+      }
+      .help-data{
+        width: 250px;
+        height: 170px;
+        background-color: $light;
+        position: absolute;
+        border-radius: $border-radius;
+        right: 0;
+        bottom: 50%;
+        translate: 0 50%;
+        z-index: 2;
+        box-shadow: $lite-shadow;
+      }
+    }
   }
+
 }
+
+
 </style>

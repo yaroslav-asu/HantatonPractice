@@ -44,8 +44,8 @@ export default {
     width: 50%;
 
     .site-thematic {
-      font-size: 60px;
-      line-height: 80px;
+      font-size: 90px;
+      line-height: 100px;
       font-weight: 500;
       white-space: pre;
       margin-bottom: 20px;
