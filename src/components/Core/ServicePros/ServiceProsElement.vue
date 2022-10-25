@@ -1,6 +1,10 @@
 <template>
   <div class="service-pros-shower">
-
+    <IconComponent
+      :name="serviceProsElement.icon"
+      :color="serviceProsElement.iconColor"
+      class="service-pros-shower__icon"
+    />
     <div class="text">
       <h4 class="title">
         {{ serviceProsElement.title }}
@@ -14,9 +18,13 @@
 
 <script>
 import { ServiceProsClass } from "src/js/ServiceProsClass";
+import IconComponent from "components/Core/Icon/IconComponent";
 
 export default {
   name: "ServiceProsElement",
+  components: {
+    IconComponent
+  },
   props: {
     serviceProsElement: {
       type: ServiceProsClass,
@@ -33,16 +41,8 @@ export default {
   max-width: 400px;
   width: 100%;
 
-  .wrapper {
-    padding: 15px;
-    background-color: $light;
-    border-radius: 10px;
-    box-shadow: $lite-shadow;
+  .service-pros-shower__icon {
     margin-right: 30px;
-
-    .icon {
-      font-size: 30px;
-    }
   }
 
   .text {
