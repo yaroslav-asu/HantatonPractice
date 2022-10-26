@@ -25,6 +25,10 @@ export default {
     title: "Our functionality",
     description: "We create websites that are easy to use and have a beautiful design.",
   },
+  lastSection: {
+    title: "Enough Talk, Let's Build Something",
+    description: "Join to us to feel the power of our team!",
+  },
   errors: {
     required: "This field is required",
     email: "Invalid email",
@@ -48,4 +52,5 @@ export default {
   },
   learnMore: "Learn more",
   more: "More",
+  letsStart: "Let's start",
 };

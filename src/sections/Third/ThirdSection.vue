@@ -1,7 +1,7 @@
 <template>
   <section class="section third-section">
     <div class="limiter">
-      <h2 class="q-mt-sm">
+      <h2>
         {{ $t("thirdSection.title") }}
       </h2>
       <h5>

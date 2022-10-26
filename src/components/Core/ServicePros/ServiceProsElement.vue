@@ -5,7 +5,7 @@
       :color="serviceProsElement.iconColor"
       class="service-pros-shower__icon"
     />
-    <div class="text">
+    <div class="content">
       <h4 class="title">
         {{ serviceProsElement.title }}
       </h4>
@@ -45,7 +45,7 @@ export default {
     margin-right: 30px;
   }
 
-  .text {
+  .content {
     color: $dark !important;
 
     .title {

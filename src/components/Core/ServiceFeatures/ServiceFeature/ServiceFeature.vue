@@ -4,7 +4,7 @@
       :name="serviceFeature.icon"
       :color="serviceFeature.iconColor"
     />
-    <div class="text">
+    <div class="content">
       <h4 class="title">
         {{ serviceFeature.title }}
       </h4>
@@ -45,7 +45,6 @@ export default {
   align-items: start;
   justify-content: space-between;
   box-shadow: $lite-shadow;
-  border-radius: 20px;
   padding: 40px;
   aspect-ratio: 1;
 }

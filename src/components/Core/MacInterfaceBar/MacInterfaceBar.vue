@@ -5,7 +5,7 @@
       <div class="interface-button full-size"></div>
       <div class="interface-button minimize"></div>
     </div>
-    <div class="mac-interface-bar__title">
+    <div class="title">
       <span class="mac-interface-bar__title-text">Title</span>
     </div>
   </div>
@@ -21,11 +21,12 @@ export default {
 .mac-interface-bar {
   display: flex;
   align-items: center;
-  padding: 5px 8px;
+  padding: 10px 10px;
 }
 
 .buttons {
   display: flex;
+  opacity: .6;
 
   .close {
     background-color: #FF0012;

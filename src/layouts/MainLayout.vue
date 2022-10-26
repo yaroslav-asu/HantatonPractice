@@ -4,6 +4,7 @@
     <FirstSection />
     <SecondSection />
     <ThirdSection />
+    <LastSection/>
   </q-layout>
 </template>
 
@@ -13,6 +14,7 @@ import FirstSection from "src/sections/First/FirstSection.vue";
 import HeaderComponent from "components/Core/Header/HeaderComponent";
 import SecondSection from "src/sections/Second/SecondSection";
 import ThirdSection from "src/sections/Third/ThirdSection";
+import LastSection from "src/sections/Last/LastSection";
 
 
 export default defineComponent({
@@ -21,7 +23,8 @@ export default defineComponent({
     ThirdSection,
     HeaderComponent,
     FirstSection,
-    SecondSection
+    SecondSection,
+    LastSection,
   }
 });
 </script>

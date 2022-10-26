@@ -1,17 +1,20 @@
 <template>
   <div class="service-features">
     <FeaturesButton
+      class="border"
       v-if="!serviceFeatures.isFirstPage"
       :features-count="serviceFeatures.featuresWas"
       iconName="west"
       :action="serviceFeatures.prev.bind(serviceFeatures)"
     />
     <ServiceFeature
+      class="border"
       v-for="el in serviceFeatures.currentPage"
       :service-feature="el"
       :key="el.title"
     />
     <FeaturesButton
+      class="border"
       v-if="!serviceFeatures.isLastPage"
       :features-count="serviceFeatures.featuresLeft"
       iconName="east"
@@ -35,10 +38,17 @@ export default {
     return {
       serviceFeatures: new ServiceFeatures([
         {
-          icon: "home",
-          iconColor: "red",
-          title: "title",
-          description: "description",
+          icon: "assignment_ind",
+          iconColor: "orange",
+          title: "Fast",
+          description: "Very fast",
+          link: "/a"
+        },
+        {
+          icon: "search",
+          iconColor: "purple",
+          title: "User friendly",
+          description: "Very user friendly",
           link: "/a"
         },
         {
@@ -46,6 +56,20 @@ export default {
           iconColor: "red",
           title: "title",
           description: "description",
+          link: "/a"
+        },
+        {
+          icon: "assignment_ind",
+          iconColor: "orange",
+          title: "Fast",
+          description: "Very fast",
+          link: "/a"
+        },
+        {
+          icon: "search",
+          iconColor: "purple",
+          title: "User friendly",
+          description: "Very user friendly",
           link: "/a"
         },
         {
@@ -87,7 +111,7 @@ export default {
           title: "title",
           description: "description",
           link: "/a"
-        },
+        }
       ])
     };
   }
@@ -99,5 +123,9 @@ export default {
   display: grid;
   grid-template-columns: repeat(3, 30%);
   grid-gap: 40px;
+}
+
+.border {
+  border-radius: 20px;
 }
 </style>

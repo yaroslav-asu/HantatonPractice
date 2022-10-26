@@ -9,8 +9,9 @@
     <q-btn
       :label="$t('header.userEntry.signUp')"
       color="primary"
-      class="button"
+      class="button big-button"
       :ripple="false"
+      no-caps
     />
   </div>
 
@@ -47,7 +48,6 @@ export default {
 
 .button {
   border-radius: 5px;
-  height: 55px;
   width: 30%;
 }
 </style>
