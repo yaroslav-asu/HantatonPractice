@@ -45,5 +45,7 @@ export default {
       title: "Affordable prices",
       description: "We offer affordable prices for our services.",
     }
-  }
+  },
+  learnMore: "Learn more",
+  more: "More",
 };
