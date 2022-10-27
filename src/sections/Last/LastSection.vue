@@ -3,7 +3,7 @@
     <div class="start-part">
       <div class="limiter">
         <div class="content">
-          <h2 class="title"> {{ $t("lastSection.title") }}</h2>
+          <h2 class="category-title"> {{ $t("lastSection.title") }}</h2>
           <h3 class="description"> {{ $t("lastSection.description") }}</h3>
           <q-btn
             class="button big-button content__button"
@@ -48,7 +48,7 @@ export default {
         .content__button{
           width: 140px;
         }
-        .title{
+        .category-title{
           margin-bottom: 40px;
           opacity: 0.9;
         }

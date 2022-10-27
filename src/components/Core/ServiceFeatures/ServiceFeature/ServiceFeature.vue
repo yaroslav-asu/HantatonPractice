@@ -5,7 +5,7 @@
       :color="serviceFeature.iconColor"
     />
     <div class="content">
-      <h4 class="title">
+      <h4 class="category-title">
         {{ serviceFeature.title }}
       </h4>
       <p>
@@ -48,7 +48,7 @@ export default {
   padding: 40px;
   aspect-ratio: 1;
 }
-.title{
+.category-title{
   margin-bottom: 8px;
 }
 </style>

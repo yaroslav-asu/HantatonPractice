@@ -1,12 +1,7 @@
 <template>
   <header class="header q-py-sm">
     <div class="limiter">
-      <div class="logo flex items-center">
-        <LogoImage />
-        <p class="logo-text">
-          & Exp
-        </p>
-      </div>
+        <LogoComponent />
       <div class="flex items-center">
         <HeaderNavigation
           :pages="pages"
@@ -18,14 +13,14 @@
 </template>
 
 <script>
-import LogoImage from "components/Core/Logo/LogoImage";
+import LogoComponent from "components/Core/Logo/LogoComponent";
 import HeaderNavigation from "components/Core/Header/Naviagation/HeaderNavigation";
 import UserEntry from "components/Core/Header/UserEntry/UserEntry";
 
 export default {
   name: "HeaderComponent",
   components: {
-    LogoImage,
+    LogoComponent,
     HeaderNavigation,
     UserEntry
   },
@@ -68,10 +63,6 @@ export default {
   align-items: center;
 }
 
-.logo-text {
-  font-size: 1.5rem;
-  margin-left: 10px !important;
-}
 
 .header__user-entry {
   margin-left: 100px;

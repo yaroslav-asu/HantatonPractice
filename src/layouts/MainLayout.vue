@@ -5,6 +5,7 @@
     <SecondSection />
     <ThirdSection />
     <LastSection/>
+    <FooterComponent/>
   </q-layout>
 </template>
 
@@ -15,6 +16,7 @@ import HeaderComponent from "components/Core/Header/HeaderComponent";
 import SecondSection from "src/sections/Second/SecondSection";
 import ThirdSection from "src/sections/Third/ThirdSection";
 import LastSection from "src/sections/Last/LastSection";
+import FooterComponent from "components/Core/Footer/FooterComponent";
 
 
 export default defineComponent({
@@ -25,6 +27,7 @@ export default defineComponent({
     FirstSection,
     SecondSection,
     LastSection,
+    FooterComponent,
   }
 });
 </script>

@@ -6,7 +6,7 @@
       class="service-pros-shower__icon"
     />
     <div class="content">
-      <h4 class="title">
+      <h4 class="category-title">
         {{ serviceProsElement.title }}
       </h4>
       <p class="description">
@@ -48,7 +48,7 @@ export default {
   .content {
     color: $dark !important;
 
-    .title {
+    .category-title {
       margin-bottom: 10px;
     }
 

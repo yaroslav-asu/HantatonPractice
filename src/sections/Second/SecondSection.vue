@@ -2,7 +2,7 @@
   <section class="section second-section">
     <div class="limiter">
       <div class="text-part">
-        <h2 class="title">
+        <h2 class="category-title">
           {{ $t("secondSection.title") }}
         </h2>
         <div class="pros">
@@ -78,7 +78,7 @@ export default {
     .text-part {
       width: 50%;
 
-      .title {
+      .category-title {
         margin-bottom: 60px;
       }
 

@@ -53,4 +53,21 @@ export default {
   learnMore: "Learn more",
   more: "More",
   letsStart: "Let's start",
+  footer: {
+    description: "We are a team of professionals in the field of web development and design. We create websites.",
+    about: "About",
+    company: "Company",
+    support: "Support",
+    aboutUs: "About us",
+    ourTeam: "Our team",
+    ourServices: "Our services",
+    ourClients: "Our clients",
+    contactUs: "Contact us",
+    ourAddress: "Our address",
+    ourPhone: "Our phone",
+    ourEmail: "Our email",
+    faq: "FAQ",
+    privacyPolicy: "Privacy policy",
+    termsOfUse: "Terms of use",
+  }
 };

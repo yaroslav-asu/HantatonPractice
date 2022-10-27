@@ -5,7 +5,7 @@
       <div class="interface-button full-size"></div>
       <div class="interface-button minimize"></div>
     </div>
-    <div class="title">
+    <div class="category-title">
       <span class="mac-interface-bar__title-text">Title</span>
     </div>
   </div>
