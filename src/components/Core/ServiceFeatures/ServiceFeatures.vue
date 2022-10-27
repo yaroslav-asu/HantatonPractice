@@ -11,7 +11,7 @@
       class="border"
       v-for="el in serviceFeatures.currentPage"
       :service-feature="el"
-      :key="el.title"
+      :key="el"
     />
     <FeaturesButton
       class="border"

@@ -44,6 +44,7 @@ export default class ServiceFeatures {
   }
 
   get currentPage() {
+    console.log(this.pages[this.currentPageIndex]);
     return this.pages[this.currentPageIndex];
   }
 
