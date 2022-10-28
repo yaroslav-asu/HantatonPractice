@@ -17,8 +17,15 @@
         :ripple="false"
       />
     </div>
-    <div class="account-name" v-else>
-      {{userAccount}}
+    <div class="wrapper" v-else>
+      <q-skeleton
+        type="circle"
+        class="user-image"
+      />
+
+      <div class="account-name">
+        {{ userAccount }}
+      </div>
     </div>
 
   </div>
@@ -29,7 +36,7 @@ export default {
   name: "UserEntry",
   data() {
     return {
-      isLoggedIn: false,
+      isLoggedIn: true,
       userAccount: "asdf"
     };
   }
@@ -37,7 +44,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.account-name{
-  font-size: 20px;
+.wrapper{
+  display: flex;
+  align-items: center;
+  .user-image{
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+  }
+  .account-name {
+    font-size: 20px;
+  }
 }
+
+
 </style>

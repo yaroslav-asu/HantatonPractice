@@ -42,7 +42,7 @@ export default {
 .service-feature{
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
   justify-content: space-between;
   box-shadow: $lite-shadow;
   padding: 40px;

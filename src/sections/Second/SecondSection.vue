@@ -20,7 +20,7 @@
         </div>
         <div class="photo-wrapper fake-photo" />
         <div class="help-data">
-<!--          <MacInterfaceBar/>-->
+
         </div>
       </div>
     </div>
@@ -29,17 +29,16 @@
 
 <script>
 import ServiceProsElement from "components/Core/ServicePros/ServiceProsElement";
-// import MacInterfaceBar from "components/Core/MacInterfaceBar/MacInterfaceBar";
 import { ServiceProsClass } from "src/js/ServiceProsClass";
 
 export default {
   name: "SecondSection",
   components: {
-    ServiceProsElement,
-    // MacInterfaceBar,
+    ServiceProsElement
   },
   data() {
     return {
+      show: true,
       servicePros: [
         new ServiceProsClass({
           icon: "inbox",
@@ -117,12 +116,13 @@ export default {
       }
 
       .fake-photo {
-        background: rgb(206,75,245);
-        background: linear-gradient(30deg, rgba(206,75,245,1) 0%, rgba(254,245,155,1) 44%, rgba(245,72,112,1) 100%);
+        background: rgb(206, 75, 245);
+        background: linear-gradient(30deg, rgba(206, 75, 245, 1) 0%, rgba(254, 245, 155, 1) 44%, rgba(245, 72, 112, 1) 100%);
         z-index: 0;
         rotate: 2deg;
       }
-      .help-data{
+
+      .help-data {
         width: 250px;
         height: 170px;
         background-color: rgba($light, 0.53);

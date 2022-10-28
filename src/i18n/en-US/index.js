@@ -69,5 +69,6 @@ export default {
     faq: "FAQ",
     privacyPolicy: "Privacy policy",
     termsOfUse: "Terms of use",
-  }
+  },
+  menu: "Menu",
 };

@@ -39,7 +39,7 @@ export default {
     .limiter {
       height: 100%;
       display: flex;
-      justify-content: end;
+      justify-content: flex-end;
       align-items: center;
 
       .content {

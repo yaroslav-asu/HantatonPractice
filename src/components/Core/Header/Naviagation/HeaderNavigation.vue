@@ -25,12 +25,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.header-link {
-  margin-right: 60px;
-  transition: color 0.2s ease;
+.header-navigation{
+  display: flex;
+  align-items: center;
+  .header-link {
+    margin: 0 30px;
+    transition: color 0.2s ease;
 
-  &:hover {
-    color: $primary;
+    &:hover {
+      color: $primary;
+    }
   }
 }
+
 </style>
