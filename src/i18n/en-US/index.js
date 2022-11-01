@@ -37,7 +37,7 @@ export default {
     invalidEmail: "Invalid email",
     invalidEmailDomain: "Invalid email domain",
     passwordsMustMatch: "Passwords must match",
-    confirmCodeIsntRight: "Confirm code isn't right",
+    confirmCodeIsntRight: "Confirm code isn't right"
   },
   emailInput: {
     placeholder: "Type your email here"
@@ -89,4 +89,10 @@ export default {
   forgotPassword: "Forgot password?",
   dontHaveAccount: "Don't have an account?",
   alreadyHaveAccount: "Already have an account?",
+  userEntry: {
+    menu: {
+      signOut: "Sign out",
+      profile: "Profile",
+    }
+  }
 };

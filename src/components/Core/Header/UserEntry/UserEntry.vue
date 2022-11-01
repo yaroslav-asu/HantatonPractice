@@ -22,10 +22,32 @@
         type="circle"
         class="user-image"
       />
-
       <div class="account-name">
         {{ userAccount }}
       </div>
+      <q-menu
+        fit
+        :offset="[0, 8]"
+      >
+        <q-list>
+          <q-item
+            clickable
+            v-close-popup
+            style="align-items: center"
+            to="/profile"
+          >
+            {{ $t("userEntry.menu.profile") }}
+          </q-item>
+          <q-item
+            clickable
+            v-close-popup
+            style="align-items: center"
+            to="/logout"
+          >
+            {{ $t("userEntry.menu.signOut") }}
+          </q-item>
+        </q-list>
+      </q-menu>
     </div>
 
   </div>
@@ -34,6 +56,9 @@
 <script>
 export default {
   name: "UserEntry",
+  props: {
+    menu: Boolean
+  },
   data() {
     return {
       isLoggedIn: true,
@@ -44,18 +69,22 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.wrapper{
+.wrapper {
   display: flex;
   align-items: center;
-  .user-image{
+  cursor: pointer;
+  position: relative;
+
+  .user-image {
     width: 50px;
     height: 50px;
     margin-right: 15px;
   }
+
   .account-name {
     font-size: 20px;
   }
+
+
 }
-
-
 </style>

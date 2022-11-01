@@ -7,7 +7,7 @@
       :placeholder="$t('emailInput.placeholder')"
       />
     <q-btn
-      :label="$t('header.userEntry.signUp')"
+      :label="$t('signUp')"
       color="primary"
       class="button big-button"
       :ripple="false"

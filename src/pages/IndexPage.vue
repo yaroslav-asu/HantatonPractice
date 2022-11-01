@@ -1,12 +1,10 @@
 
 <template>
   <q-page>
-<!--    <HeaderComponent />-->
     <FirstSection />
     <SecondSection />
     <ThirdSection />
     <LastSection/>
-<!--    <FooterComponent/>-->
   </q-page>
 </template>
 
