@@ -8,7 +8,6 @@
     >
       {{ $t(`header.navigation.${page.title}`) }}
     </router-link>
-
   </nav>
 </template>
 

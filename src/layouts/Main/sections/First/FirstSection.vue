@@ -14,7 +14,7 @@
 
         <q-img
           class="man-image"
-          src="../../assets/images/sittingMan.png"
+          src="~assets/images/sittingMan.png"
         />
       </div>
     </div>

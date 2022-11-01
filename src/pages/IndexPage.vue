@@ -1,33 +1,30 @@
+
 <template>
-  <q-layout>
-    <HeaderComponent />
+  <q-page>
+<!--    <HeaderComponent />-->
     <FirstSection />
     <SecondSection />
     <ThirdSection />
     <LastSection/>
-    <FooterComponent/>
-  </q-layout>
+<!--    <FooterComponent/>-->
+  </q-page>
 </template>
 
 <script>
 import { defineComponent } from "vue";
-import FirstSection from "src/sections/First/FirstSection.vue";
-import HeaderComponent from "components/Core/Header/HeaderComponent";
-import SecondSection from "src/sections/Second/SecondSection";
-import ThirdSection from "src/sections/Third/ThirdSection";
-import LastSection from "src/sections/Last/LastSection";
-import FooterComponent from "components/Core/Footer/FooterComponent";
+import FirstSection from "src/layouts/Main/sections/First/FirstSection.vue";
+import SecondSection from "src/layouts/Main/sections/Second/SecondSection";
+import ThirdSection from "src/layouts/Main/sections/Third/ThirdSection";
+import LastSection from "src/layouts/Main/sections/Last/LastSection";
 
 
 export default defineComponent({
   name: "MainLayout",
   components: {
-    ThirdSection,
-    HeaderComponent,
     FirstSection,
     SecondSection,
+    ThirdSection,
     LastSection,
-    FooterComponent,
   }
 });
 </script>

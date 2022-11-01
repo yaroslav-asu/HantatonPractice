@@ -16,7 +16,7 @@
       </div>
       <div class="photo-part">
         <div class="photo-wrapper photo">
-          <q-img class="photo-wrapper__photo" src="../../assets/images/woman.jpg" />
+          <q-img class="photo-wrapper__photo" src="~assets/images/woman.jpg" />
         </div>
         <div class="photo-wrapper fake-photo" />
         <div class="help-data">

@@ -5,7 +5,7 @@
         no-caps
         flat
         class="button q-mr-md"
-        :label="$t('header.userEntry.login')"
+        :label="$t('login')"
         :ripple="false"
 
       />
@@ -13,7 +13,7 @@
         no-caps
         color="primary"
         class="button"
-        :label="$t('header.userEntry.signUp')"
+        :label="$t('signUp')"
         :ripple="false"
       />
     </div>
