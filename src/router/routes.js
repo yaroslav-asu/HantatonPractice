@@ -7,10 +7,14 @@ const routes = [
     ]
   },
   {
-    path: "/profile",
-    component: () => import("layouts/Main/MainLayout.vue"),
+    path: "/app",
+    component: () => import("layouts/App/AppLayout.vue")
+  },
+  {
+    path: "/settings",
+    component: () => import("layouts/App/AppLayout.vue"),
     children: [
-      { path: "", component: () => import("pages/IndexPage.vue") }
+      { path: "", component: () => import("pages/SettingsPage.vue") }
     ]
   },
   {

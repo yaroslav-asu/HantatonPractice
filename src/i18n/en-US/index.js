@@ -2,14 +2,12 @@
 // so you can safely delete all default props below
 
 export default {
-  header: {
-    navigation: {
-      home: "Home",
-      portfolio: "Portfolio",
-      howItWorks: "How it works",
-      team: "Team"
-    }
-
+  pages: {
+    home: "Home",
+    portfolio: "Portfolio",
+    howItWorks: "How it works",
+    team: "Team",
+    settings: "Settings",
   },
   firstSection: {
     thematic: "Creative Design \n& Experience",
@@ -92,7 +90,7 @@ export default {
   userEntry: {
     menu: {
       signOut: "Sign out",
-      profile: "Profile",
+      profile: "Profile"
     }
-  }
+  },
 };

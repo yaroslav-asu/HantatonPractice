@@ -1,0 +1,16 @@
+.beautiful-active-tab {
+  .q-tabs__content {
+
+    .q-tab--active {
+      background-color: $grey;
+      border-radius: 8px;
+    }
+    .q-tab{
+      padding: 6px 10px !important;
+    }
+
+    .q-tab__indicator {
+      display: none;
+    }
+  }
+}

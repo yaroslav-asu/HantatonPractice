@@ -1,7 +1,7 @@
 <template>
   <q-layout class="main-page lHh Lpr lFf">
-    <HeaderComponent />
-    <q-page-container>
+    <HeaderComponent/>
+    <q-page-container class="content" >
       <router-view />
     </q-page-container>
     <FooterComponent />
@@ -23,5 +23,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+.content{
+  padding-top: $header-height;
+}
 </style>

@@ -53,7 +53,7 @@ export default {
 
       .man-image {
         position: absolute;
-        bottom: 10px;
+        bottom: 10px + $header-height;
         right: 0;
         width: 58%;
         z-index: 0;

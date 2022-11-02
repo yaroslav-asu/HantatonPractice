@@ -29,7 +29,6 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .first-section {
-  padding-top: $header-height;
   height: 100vh;
 }
 
