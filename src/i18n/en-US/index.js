@@ -7,7 +7,18 @@ export default {
     portfolio: "Portfolio",
     howItWorks: "How it works",
     team: "Team",
-    settings: "Settings",
+    settings: "Settings"
+  },
+  settings: {
+    password: {
+      title: "Password",
+      description: "Please enter your current password to change your password",
+      currentPassword: "Current password",
+      newPassword: "New password",
+      confirmNewPassword: "Confirm new password",
+      newPasswordHint: "Your new password must be at least 8 characters.",
+      updatePassword: "Update password",
+    }
   },
   firstSection: {
     thematic: "Creative Design \n& Experience",
@@ -93,4 +104,7 @@ export default {
       profile: "Profile"
     }
   },
+  buttons: {
+    cancel: "Cancel",
+  }
 };

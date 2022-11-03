@@ -1,12 +1,16 @@
 .beautiful-active-tab {
   .q-tabs__content {
-
     .q-tab--active {
       background-color: $grey;
       border-radius: 8px;
     }
-    .q-tab{
+
+    .q-tab {
       padding: 6px 10px !important;
+      &:hover{
+        background-color: rgba($grey, 0.3);
+        border-radius: 8px;
+      }
     }
 
     .q-tab__indicator {

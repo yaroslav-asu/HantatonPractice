@@ -1,7 +1,7 @@
 <template>
   <header class="header q-py-sm">
     <div class="limiter">
-      <LogoComponent />
+      <LogoComponent to="/"/>
       <div class="content flex">
         <HeaderNavigation
           :pages="pages"

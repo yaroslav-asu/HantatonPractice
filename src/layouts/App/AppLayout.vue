@@ -2,7 +2,7 @@
   <q-layout class="app">
     <div class="limiter">
       <nav class="app-navigation">
-        <LogoComponent class="q-mb-lg" />
+        <LogoComponent class="q-mb-lg" to="/"/>
         <q-tabs
           class="tabs beautiful-active-tab"
           vertical
@@ -27,7 +27,7 @@
                 :to="links[blockTitle][routeTabTitle].to"
               >
                 <q-icon
-                  :name="links[blockTitle][routeTabTitle].icon"
+                  :name="`fa-solid fa-${links[blockTitle][routeTabTitle].icon}`"
                   class="tab-content__icon q-mr-sm"
                 />
                 <p class="tab-content__text">
@@ -68,14 +68,14 @@ export default {
       links: {
         "tabs-top": {
           home: {
-            icon: "o_home",
+            icon: "house",
             title: this.$t("pages.home"),
             to: "/"
           }
         },
         "tabs-bottom": {
           settings: {
-            icon: "o_settings",
+            icon: "gear",
             title: this.$t("pages.settings"),
             to: "/settings"
           }

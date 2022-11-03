@@ -20,7 +20,7 @@
     <div class="wrapper" v-else>
       <q-skeleton
         type="circle"
-        class="user-image"
+        class="user-image-wrapper"
       />
       <div class="account-name">
         {{ userAccount }}
@@ -75,7 +75,7 @@ export default {
   cursor: pointer;
   position: relative;
 
-  .user-image {
+  .user-image-wrapper {
     width: 50px;
     height: 50px;
     margin-right: 15px;

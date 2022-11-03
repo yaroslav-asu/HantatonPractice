@@ -3,6 +3,8 @@
 @import "quasar/checkbox.scss";
 @import "quasar/tab.scss";
 @import "quasar/tabs.scss";
+@import "quasar/tab-panel.scss";
+@import "quasar/input.scss";
 
 * {
   margin: 0;
@@ -65,9 +67,7 @@ h4 {
   color: $text-color;
 }
 
-.big-button {
-  height: 55px;
-}
+
 
 li {
   list-style: none;

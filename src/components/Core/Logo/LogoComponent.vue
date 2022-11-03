@@ -1,16 +1,36 @@
 <template>
-  <div class="logo">
+  <div
+    class="logo"
+    v-if="!to"
+  >
     <div class="logo-image" />
     <p class="logo-text">
      & Exp
     </p>
   </div>
-
+  <router-link
+    :to="to"
+    v-else
+  >
+    <div
+      class="logo"
+    >
+      <div class="logo-image" />
+      <p class="logo-text">
+       & Exp
+      </p>
+    </div>
+  </router-link>
 </template>
 
 <script>
 export default {
-  name: "LogoComponent"
+  name: "LogoComponent",
+  props: {
+    to: {
+      type: String
+    }
+  }
 };
 </script>
 
