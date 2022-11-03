@@ -14,6 +14,14 @@ const routes = [
     ]
   },
   {
+    path: "/dashboard",
+    component: () => import("layouts/App/AppLayout.vue")
+  },
+  {
+    path: "/profile",
+    component: () => import("layouts/App/AppLayout.vue")
+  },
+  {
     path: "/login",
     component: () => import("layouts/UserEntryLayout.vue")
   },

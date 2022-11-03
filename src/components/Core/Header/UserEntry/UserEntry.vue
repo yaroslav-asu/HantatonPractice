@@ -31,20 +31,14 @@
       >
         <q-list>
           <q-item
+            v-for="item in menuItems"
+            :key="item"
             clickable
             v-close-popup
             style="align-items: center"
-            to="/profile"
+            :to="item.to"
           >
-            {{ $t("userEntry.menu.profile") }}
-          </q-item>
-          <q-item
-            clickable
-            v-close-popup
-            style="align-items: center"
-            to="/logout"
-          >
-            {{ $t("userEntry.menu.signOut") }}
+            {{ item.title }}
           </q-item>
         </q-list>
       </q-menu>
@@ -62,7 +56,26 @@ export default {
   data() {
     return {
       isLoggedIn: true,
-      userAccount: "asdf"
+      userAccount: "asdf",
+      menuItems: {
+        profile: {
+          title: this.$t("pages.profile"),
+          to: "/profile"
+        },
+        dashboard: {
+          title: this.$t("pages.dashboard"),
+          to: "/dashboard"
+        },
+
+        settings: {
+          title: this.$t('pages.settings'),
+          to: "/settings"
+        },
+        signOut: {
+          title: this.$t("userEntry.menu.signOut"),
+          to: "/logout"
+        }
+      }
     };
   }
 };

@@ -2,11 +2,11 @@
   <nav class="header-navigation">
     <router-link
       v-for="page in pages"
-      :key="page.title"
+      :key="page"
       class="header-link"
       :to="page.link"
     >
-      {{ $t(`header.navigation.${page.title}`) }}
+      {{ $t(`pages.${page.title}`) }}
     </router-link>
   </nav>
 </template>

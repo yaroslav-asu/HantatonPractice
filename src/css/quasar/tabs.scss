@@ -7,7 +7,9 @@
 
     .q-tab {
       padding: 6px 10px !important;
-      &:hover{
+      transition: border-radius 0s;
+
+      &:hover {
         background-color: rgba($grey, 0.3);
         border-radius: 8px;
       }

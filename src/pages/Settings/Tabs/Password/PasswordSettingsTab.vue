@@ -1,8 +1,8 @@
 <template>
-  <SettingTab
+  <SettingsTab
     :title="$t('settings.password.title')"
-    :description="$t('settings.password.currentPassword')"
-    :submit-func="()=> {}"
+    :description="$t('settings.password.description')"
+    :submit-func="changePassword"
     :save-button-title="$t('settings.password.updatePassword')"
   >
     <SettingsInputSection
@@ -18,22 +18,23 @@
       :title="$t('settings.password.confirmNewPassword')"
       v-model="newPassword2"
     />
-  </SettingTab>
+  </SettingsTab>
 </template>
 
 <script>
-import SettingTab from "pages/Settings/Tabs/SettingsTab";
+import SettingsTab from "pages/Settings/Tabs/SettingsTab";
 import SettingsInputSection from "pages/Settings/Tabs/Section/SettingsInputSection";
 
 export default {
   name: "PasswordTab",
   components: {
-    SettingTab,
+    SettingsTab,
     SettingsInputSection
   },
 
   methods: {
     changePassword() {
+      console.log("changePassword");
     }
   }
 };

@@ -1,21 +1,34 @@
 <template>
-  <SettingTab
-  :title="$t('settings.profile.title')"
-  :description="$t('settings.profile.description')"
-  :saveButtonTitle="$t('buttons.save')"
-  :submitFunc="() => {}"
+  <SettingsTab
+    :title="$t('settings.profile.title')"
+    :description="$t('settings.profile.description')"
+    :saveButtonTitle="$t('buttons.save')"
+    :submitFunc="() => {}"
   >
-
-  </SettingTab>
+    <SettingsInputSection
+      :title="$t('firstName')"
+      v-model="firstName"
+    />
+    <SettingsInputSection
+      :title="$t('lastName')"
+      v-model="lastName"
+    />
+    <SettingsInputSection
+      :title="$t('email')"
+      v-model="email"
+    />
+  </SettingsTab>
 </template>
 
 <script>
-import SettingTab from "/src/pages/Settings/Tabs/SettingsTab.vue";
+import SettingsTab from "/src/pages/Settings/Tabs/SettingsTab.vue";
+import SettingsInputSection from "pages/Settings/Tabs/Section/SettingsInputSection";
 
 export default {
   name: "ProfileSettingsTab",
   components: {
-    SettingTab
+    SettingsTab,
+    SettingsInputSection
   }
 
 };

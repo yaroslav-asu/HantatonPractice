@@ -16,7 +16,7 @@
         class="button cancel-btn"
         :label="$t('buttons.cancel')"
         color="primary"
-        outline
+        flat
         :ripple="false"
         no-caps
       />
@@ -34,23 +34,23 @@
 
 <script>
 export default {
-  name: "SettingTab",
+  name: "SettingsTab",
   props: {
     title: {
       type: String,
-      required: true,
+      required: true
     },
     description: {
       type: String,
-      required: true,
+      required: true
     },
     saveButtonTitle: {
       type: String,
-      required: true,
+      required: true
     },
-    submitFunc:{
+    submitFunc: {
       type: Function,
-      required: true,
+      required: true
     }
   }
 };

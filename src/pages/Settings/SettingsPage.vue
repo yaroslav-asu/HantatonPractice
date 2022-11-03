@@ -1,10 +1,10 @@
 <template>
   <q-page class="settings-page ">
-    <div class="wrapper shadow-4">
+    <div class="wrapper">
       <div class="top-image" />
       <div class="content">
         <div class="top-part">
-          <q-avatar class="user-image-wrapper shadow-4">
+          <q-avatar class="user-image-wrapper">
             <q-img
               class="user-image"
               src="https://sun1-26.userapi.com/s/v1/ig2/LV10_OFN1o0g-pjzVrAIZlg9iPwNxsaSzE2IZTkjvdVNNWcinl88L_zDIWwaGizbTFj4XX24c90UgHwg-9zwxZEN.jpg?size=200x200&quality=95&crop=102,0,581,581&ava=1"
@@ -29,26 +29,10 @@
             <q-tab
               class="tab"
               :ripple="false"
-              name="profile"
-              label="Profile"
-            />
-            <q-tab
-              class="tab"
-              :ripple="false"
-              name="password"
-              label="Password"
-            />
-            <q-tab
-              class="tab"
-              :ripple="false"
-              name="security"
-              label="Security"
-            />
-            <q-tab
-              class="tab"
-              :ripple="false"
-              name="notifications"
-              label="Notifications"
+              v-for="tab in tabs"
+              :key="tab"
+              :name="tab.name"
+              :label="tab.label"
             />
             <q-separator class="separator" />
           </q-tabs>
@@ -62,13 +46,19 @@
               name="password"
               class="tab-panel"
             >
-              <PasswordTab />
+              <PasswordSettingsTab />
             </q-tab-panel>
             <q-tab-panel
               name="profile"
               class="tab-panel"
             >
               <ProfileSettingsTab />
+            </q-tab-panel>
+            <q-tab-panel
+              name="language"
+              class="tab-panel"
+            >
+              <LanguageSettingsTab />
             </q-tab-panel>
           </q-tab-panels>
         </div>
@@ -78,19 +68,35 @@
 </template>
 
 <script>
-import PasswordTab from "pages/Settings/Tabs/Password/PasswordSettingsTab";
+import PasswordSettingsTab from "pages/Settings/Tabs/Password/PasswordSettingsTab";
 import ProfileSettingsTab from "pages/Settings/Tabs/Profile/ProfileSettingsTab";
+import LanguageSettingsTab from "pages/Settings/Tabs/Language/LanguageSettingsTab";
 
 export default {
   name: "SettingsPage",
   components: {
     ProfileSettingsTab,
-    PasswordTab,
+    PasswordSettingsTab,
+    LanguageSettingsTab
   },
 
   data() {
     return {
-      activeTab: "profile"
+      activeTab: "profile",
+      tabs: {
+        profile: {
+          name: "profile",
+          label: "Profile"
+        },
+        password: {
+          name: "password",
+          label: "Password"
+        },
+        language: {
+          name: "language",
+          label: "Language"
+        }
+      }
     };
   }
 };
@@ -107,6 +113,7 @@ export default {
     position: relative;
     display: flex;
     flex-direction: column;
+    box-shadow: $lite-shadow-1;
 
 
     .top-image {
@@ -142,6 +149,7 @@ export default {
           background-color: $grey;
           border: 3px solid $light;
           margin-right: 20px;
+          box-shadow: $lite-shadow-2;
 
           .user-image {
             height: 100%;
@@ -163,6 +171,7 @@ export default {
         display: flex;
         flex-direction: column;
         overflow: auto;
+
         .separator {
           height: 2px;
           background-color: $grey;
@@ -170,7 +179,8 @@ export default {
           bottom: 0;
           width: 100%;
         }
-        .tab-panels{
+
+        .tab-panels {
           overflow-y: auto;
         }
       }

@@ -1,13 +1,12 @@
-// This is just an example,
-// so you can safely delete all default props below
-
 export default {
   pages: {
     home: "Home",
     portfolio: "Portfolio",
     howItWorks: "How it works",
     team: "Team",
-    settings: "Settings"
+    settings: "Settings",
+    dashboard: "Dashboard",
+    profile: "Profile"
   },
   settings: {
     password: {
@@ -17,11 +16,16 @@ export default {
       newPassword: "New password",
       confirmNewPassword: "Confirm new password",
       newPasswordHint: "Your new password must be at least 8 characters.",
-      updatePassword: "Update password",
+      updatePassword: "Update password"
     },
     profile: {
       title: "Profile",
-      description: "Edit your profile information",}
+      description: "Edit your profile information"
+    },
+    language: {
+      title: "Language",
+      description: "Select your preferred language"
+    }
   },
   firstSection: {
     thematic: "Creative Design \n& Experience",
@@ -109,6 +113,8 @@ export default {
   },
   buttons: {
     cancel: "Cancel",
-    save: "Save",
-  }
+    save: "Save"
+  },
+  firstName: "First name",
+  lastName: "Last name"
 };

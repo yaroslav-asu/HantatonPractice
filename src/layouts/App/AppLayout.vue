@@ -71,9 +71,19 @@ export default {
             icon: "house",
             title: this.$t("pages.home"),
             to: "/"
+          },
+          dashboard: {
+            icon: "chart-line",
+            title: this.$t("pages.dashboard"),
+            to: "/dashboard"
           }
         },
         "tabs-bottom": {
+          profile: {
+            icon: "circle-user",
+            title: this.$t("pages.profile"),
+            to: "/profile"
+          },
           settings: {
             icon: "gear",
             title: this.$t("pages.settings"),

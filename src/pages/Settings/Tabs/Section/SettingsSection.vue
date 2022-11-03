@@ -3,41 +3,13 @@
     <p class="settings_section__title">
       {{ title }}
     </p>
-    <q-input
-      class="
-            input--bald-border
-            input--rounded-border-radius
-            input--gray-border
-            settings_section__input
-            input-hint--custom
-            "
-      outlined
-      dense
-      :hint="inputHint"
-      v-model="model"
-      v-if="inputHint && inputHint.length > 0"
-    />
-    <q-input
-      class="
-            input--bald-border
-            input--rounded-border-radius
-            input--gray-border
-            settings_section__input
-            input-hint--custom
-            "
-      outlined
-      dense
-
-      v-model="model"
-      v-else
-    />
-
+    <slot/>
   </section>
 </template>
 
 <script>
 export default {
-  name: "SettingsInputSection",
+  name: "SettingsSection",
   props: {
     title: {
       type: String,
@@ -65,7 +37,6 @@ export default {
       this.$emit("update:modelValue", this.model);
     }
   }
-
 };
 </script>
 
