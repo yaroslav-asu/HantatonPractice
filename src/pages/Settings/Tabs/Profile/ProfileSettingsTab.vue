@@ -22,7 +22,7 @@
 
 <script>
 import SettingsTab from "/src/pages/Settings/Tabs/SettingsTab.vue";
-import SettingsInputSection from "pages/Settings/Tabs/Section/SettingsInputSection";
+import SettingsInputSection from "pages/Settings/Tabs/Section/Input/SettingsInputSection";
 
 export default {
   name: "ProfileSettingsTab",

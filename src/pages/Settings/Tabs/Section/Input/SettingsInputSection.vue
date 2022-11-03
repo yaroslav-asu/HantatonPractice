@@ -1,16 +1,12 @@
 <template>
-  <section class="settings_section">
-    <p class="settings_section__title">
-      {{ title }}
-    </p>
+  <SettingsSection
+    :title="title"
+  >
     <q-input
-      class="
-            input--bald-border
-            input--rounded-border-radius
-            input--gray-border
-            settings_section__input
-            input-hint--custom
-            "
+      class="input--bald-border
+             input--rounded-border-radius
+             input--gray-border
+             input-hint--custom"
       outlined
       dense
       :hint="inputHint"
@@ -18,26 +14,28 @@
       v-if="inputHint && inputHint.length > 0"
     />
     <q-input
-      class="
-            input--bald-border
-            input--rounded-border-radius
-            input--gray-border
-            settings_section__input
-            input-hint--custom
-            "
+      class="input--bald-border
+             input--rounded-border-radius
+             input--gray-border
+             input-hint--custom"
       outlined
       dense
 
       v-model="model"
       v-else
     />
-
-  </section>
+  </SettingsSection>
 </template>
 
 <script>
+import SettingsSection from "pages/Settings/Tabs/Section/SettingsSection";
+
 export default {
   name: "SettingsInputSection",
+  components: {
+    SettingsSection
+  },
+
   props: {
     title: {
       type: String,
@@ -76,7 +74,7 @@ export default {
   display: inline-block;
 }
 
-.settings_section__input {
+.settings_section__content {
   display: inline-block;
   width: 50%;
   float: right;

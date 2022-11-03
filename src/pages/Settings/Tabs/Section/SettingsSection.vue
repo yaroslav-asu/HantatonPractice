@@ -3,7 +3,18 @@
     <p class="settings_section__title">
       {{ title }}
     </p>
-    <slot/>
+    <div class="settings_section__content">
+      <slot
+        :bind="{
+        value: model
+      }"
+        :on="{
+        input: updateValue,
+        change: updateValue,
+      }"
+      />
+    </div>
+
   </section>
 </template>
 
@@ -15,26 +26,16 @@ export default {
       type: String,
       required: true
     },
-    inputHint: {
-      type: String,
-      default: null
-    },
-    modelValue: {
-      type: String,
-      required: true
-    }
   },
   data() {
     return {
       model: this.modelValue
     };
   },
-  watch: {
-    modelValue() {
-      this.model = this.modelValue;
-    },
-    model() {
-      this.$emit("update:modelValue", this.model);
+  methods: {
+    updateValue(value) {
+      this.model = value;
+      this.$emit("update:modelValue", value);
     }
   }
 };
@@ -47,7 +48,7 @@ export default {
   display: inline-block;
 }
 
-.settings_section__input {
+.settings_section__content {
   display: inline-block;
   width: 50%;
   float: right;

@@ -24,7 +24,8 @@ export default {
     },
     language: {
       title: "Language",
-      description: "Select your preferred language"
+      description: "Select your preferred language",
+      currentLanguage: "Current language"
     }
   },
   firstSection: {
