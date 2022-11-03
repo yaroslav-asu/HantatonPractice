@@ -18,7 +18,10 @@ export default {
       confirmNewPassword: "Confirm new password",
       newPasswordHint: "Your new password must be at least 8 characters.",
       updatePassword: "Update password",
-    }
+    },
+    profile: {
+      title: "Profile",
+      description: "Edit your profile information",}
   },
   firstSection: {
     thematic: "Creative Design \n& Experience",
@@ -106,5 +109,6 @@ export default {
   },
   buttons: {
     cancel: "Cancel",
+    save: "Save",
   }
 };

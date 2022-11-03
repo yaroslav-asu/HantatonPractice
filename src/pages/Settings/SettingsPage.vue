@@ -54,11 +54,8 @@
           </q-tabs>
           <q-tab-panels
             v-model="activeTab"
-            animated
             swipeable
             vertical
-            transition-prev="jump-up"
-            transition-next="jump-up"
             class="tab-panels"
           >
             <q-tab-panel
@@ -67,28 +64,33 @@
             >
               <PasswordTab />
             </q-tab-panel>
-
+            <q-tab-panel
+              name="profile"
+              class="tab-panel"
+            >
+              <ProfileSettingsTab />
+            </q-tab-panel>
           </q-tab-panels>
         </div>
-
-
       </div>
     </div>
   </q-page>
 </template>
 
 <script>
-import PasswordTab from "pages/Settings/Password/PasswordTab";
+import PasswordTab from "pages/Settings/Tabs/Password/PasswordTab";
+import ProfileSettingsTab from "pages/Settings/Tabs/Profile/ProfileSettingsTab";
 
 export default {
   name: "SettingsPage",
   components: {
+    ProfileSettingsTab,
     PasswordTab,
   },
 
   data() {
     return {
-      activeTab: "password"
+      activeTab: "profile"
     };
   }
 };
@@ -147,7 +149,6 @@ export default {
         }
 
         .text {
-          //display: inline-block;
           .title {
             font-size: 35px;
             font-weight: 600;
@@ -171,7 +172,6 @@ export default {
         }
         .tab-panels{
           overflow-y: auto;
-          //height: 100%;
         }
       }
     }

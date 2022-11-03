@@ -5,6 +5,7 @@
 @import "quasar/tabs.scss";
 @import "quasar/tab-panel.scss";
 @import "quasar/input.scss";
+@import "pages/settings/settingsPage.scss";
 
 * {
   margin: 0;
@@ -66,7 +67,6 @@ h4 {
   font-weight: 600;
   color: $text-color;
 }
-
 
 
 li {
