@@ -78,7 +78,7 @@
 </template>
 
 <script>
-import PasswordTab from "pages/Settings/Tabs/Password/PasswordTab";
+import PasswordTab from "pages/Settings/Tabs/Password/PasswordSettingsTab";
 import ProfileSettingsTab from "pages/Settings/Tabs/Profile/ProfileSettingsTab";
 
 export default {
