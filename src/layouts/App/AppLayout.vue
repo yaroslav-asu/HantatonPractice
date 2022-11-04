@@ -91,6 +91,11 @@ export default {
             icon: "gear",
             title: this.$t("pages.settings"),
             to: "/settings"
+          },
+          logout: {
+            icon: "arrow-right-from-bracket",
+            title: this.$t("pages.logout"),
+            to: "/logout"
           }
         }
       };

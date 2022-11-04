@@ -6,12 +6,13 @@ export default {
     team: "Команда",
     settings: "Настройки",
     dashboard: "Панель управления",
-    profile: "Профиль"
+    profile: "Профиль",
+    logout: "Выйти",
   },
   settings: {
     password: {
       title: "Пароль",
-        description: "Пожалуйста, введите ваш текущий пароль, для изменения пароля",
+      description: "Пожалуйста, введите ваш текущий пароль, для изменения пароля",
       currentPassword: "Текущий пароль",
       newPassword: "Новый пароль",
       confirmNewPassword: "Подтвердите новый пароль",
@@ -54,10 +55,10 @@ export default {
     invalidEmail: "Пожалуйста, введите действительный адрес электронной почты",
     invalidEmailDomain: "Пожалуйста, введите действительный адрес электронной почты",
     passwordsMustMatch: "Пароли должны совпадать",
-    confirmCodeIsntRight: "Подтверждение кода неверно",
+    confirmCodeIsntRight: "Подтверждение кода неверно"
   },
   emailInput: {
-    placeholder: "Введите ваш адрес электронной почты",
+    placeholder: "Ваш email"
   },
   servicePros: {
     first: {
@@ -69,7 +70,7 @@ export default {
       description: "Мы создаем приложения, которые легко использовать и имеют красивый дизайн."
     },
     third: {
-        title: "Создание мобильных приложений",
+      title: "Создание мобильных приложений",
       description: "Мы создаем мобильные приложения, которые легко использовать и имеют красивый дизайн."
     }
   },
@@ -91,31 +92,25 @@ export default {
     ourEmail: "Наша электронная почта",
     faq: "FAQ",
     privacyPolicy: "Политика конфиденциальности",
-    termsOfUse: "Условия использования",
+    termsOfUse: "Условия использования"
   },
   menu: "Меню",
   login: "Войти",
-  signUp: "Зарегистрироваться",
+  signUp: "Регистрация",
   email: "Электронная почта",
   password: "Пароль",
-  register: "Зарегистрироваться",
-  togglePasswordVisibility: "Переключить видимость пароля",
-  showPassword: "Показать пароль",
-  hidePassword: "Скрыть пароль",
-  rememberMe: "Запомнить меня",
-  forgotPassword: "Забыли пароль?",
   dontHaveAccount: "У вас нет аккаунта?",
   alreadyHaveAccount: "У вас уже есть аккаунт?",
   userEntry: {
     menu: {
       signOut: "Выйти",
-      profile: "Профиль",
+      profile: "Профиль"
     }
   },
   buttons: {
     cancel: "Отмена",
-    save: "Сохранить",
+    save: "Сохранить"
   },
   firstName: "Имя",
-  lastName: "Фамилия",
+  lastName: "Фамилия"
 };

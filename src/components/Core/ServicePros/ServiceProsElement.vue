@@ -50,6 +50,7 @@ export default {
 
     .category-title {
       margin-bottom: 10px;
+      line-height: 22px;
     }
 
     .description {

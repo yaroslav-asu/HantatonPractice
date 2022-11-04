@@ -29,11 +29,11 @@ const routes = [
   },
   {
     path: "/login",
-    component: () => import("layouts/UserEntryLayout.vue")
+    component: () => import("layouts/UserEntry/UserEntryLayout.vue")
   },
   {
     path: "/register",
-    component: () => import("layouts/UserEntryLayout.vue")
+    component: () => import("layouts/UserEntry/UserEntryLayout.vue")
   },
   {
     path: "/:catchAll(.*)*",
