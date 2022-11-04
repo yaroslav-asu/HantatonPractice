@@ -10,16 +10,22 @@ const routes = [
     path: "/settings",
     component: () => import("layouts/App/AppLayout.vue"),
     children: [
-      { path: "", component: () => import("pages/Settings/SettingsPage.vue") }
+      { path: "", component: () => import("pages/App/SettingsPage.vue") }
     ]
   },
   {
     path: "/dashboard",
-    component: () => import("layouts/App/AppLayout.vue")
+    component: () => import("layouts/App/AppLayout.vue"),
+    children: [
+      { path: "", component: () => import("pages/App/DashboardPage.vue") }
+    ]
   },
   {
     path: "/profile",
-    component: () => import("layouts/App/AppLayout.vue")
+    component: () => import("layouts/App/AppLayout.vue"),
+    children: [
+      { path: "", component: () => import("pages/App/ProfilePage.vue") }
+    ]
   },
   {
     path: "/login",

@@ -21,8 +21,8 @@
 </template>
 
 <script>
-import SettingsTab from "/src/pages/Settings/Tabs/SettingsTab.vue";
-import SettingsInputSection from "pages/Settings/Tabs/Section/Input/SettingsInputSection";
+import SettingsTab from "/src/components/Pages/App/Settings/Tabs/SettingsTab.vue";
+import SettingsInputSection from "components/Pages/App/Settings/Tabs/Section/Input/SettingsInputSection";
 
 export default {
   name: "ProfileSettingsTab",

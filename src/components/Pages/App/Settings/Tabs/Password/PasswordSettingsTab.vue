@@ -22,8 +22,8 @@
 </template>
 
 <script>
-import SettingsTab from "pages/Settings/Tabs/SettingsTab";
-import SettingsInputSection from "pages/Settings/Tabs/Section/Input/SettingsInputSection";
+import SettingsTab from "components/Pages/App/Settings/Tabs/SettingsTab";
+import SettingsInputSection from "components/Pages/App/Settings/Tabs/Section/Input/SettingsInputSection";
 
 export default {
   name: "PasswordTab",

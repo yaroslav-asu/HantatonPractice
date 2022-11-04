@@ -1,75 +1,56 @@
 <template>
-  <q-page class="settings-page ">
-    <div class="wrapper">
-      <div class="top-image" />
-      <div class="content">
-        <div class="top-part">
-          <UserImage
-            class="user-image-wrapper"
-            editable
-          />
+  <AppPageTemplate
+    :title="$t('pages.settings')"
+  >
+    <q-tabs
+      align="left"
+      no-caps
+      v-model="activeTab"
+    >
+      <q-tab
+        class="tab"
+        :ripple="false"
+        v-for="tab in tabs"
+        :key="tab"
+        :name="tab.name"
+        :label="tab.label"
+      />
+      <q-separator class="separator" />
+    </q-tabs>
+    <q-tab-panels
+      v-model="activeTab"
+      swipeable
+      vertical
+      class="tab-panels"
+    >
+      <q-tab-panel
+        name="password"
+        class="tab-panel"
+      >
+        <PasswordSettingsTab />
+      </q-tab-panel>
+      <q-tab-panel
+        name="profile"
+        class="tab-panel"
+      >
+        <ProfileSettingsTab />
+      </q-tab-panel>
+      <q-tab-panel
+        name="language"
+        class="tab-panel"
+      >
+        <LanguageSettingsTab />
+      </q-tab-panel>
+    </q-tab-panels>
+  </AppPageTemplate>
 
-          <div class="text">
-            <h3 class="title">
-              {{ $t("pages.settings") }}
-            </h3>
-            <p class="email">
-              asdf
-            </p>
-          </div>
-        </div>
-        <div class="middle-part">
-          <q-tabs
-            align="left"
-            no-caps
-            v-model="activeTab"
-          >
-            <q-tab
-              class="tab"
-              :ripple="false"
-              v-for="tab in tabs"
-              :key="tab"
-              :name="tab.name"
-              :label="tab.label"
-            />
-            <q-separator class="separator" />
-          </q-tabs>
-          <q-tab-panels
-            v-model="activeTab"
-            swipeable
-            vertical
-            class="tab-panels"
-          >
-            <q-tab-panel
-              name="password"
-              class="tab-panel"
-            >
-              <PasswordSettingsTab />
-            </q-tab-panel>
-            <q-tab-panel
-              name="profile"
-              class="tab-panel"
-            >
-              <ProfileSettingsTab />
-            </q-tab-panel>
-            <q-tab-panel
-              name="language"
-              class="tab-panel"
-            >
-              <LanguageSettingsTab />
-            </q-tab-panel>
-          </q-tab-panels>
-        </div>
-      </div>
-    </div>
-  </q-page>
 </template>
 
 <script>
-import PasswordSettingsTab from "pages/Settings/Tabs/Password/PasswordSettingsTab";
-import ProfileSettingsTab from "pages/Settings/Tabs/Profile/ProfileSettingsTab";
-import LanguageSettingsTab from "pages/Settings/Tabs/Language/LanguageSettingsTab";
-import UserImage from "components/Core/UserImage/UserImage";
+import PasswordSettingsTab from "components/Pages/App/Settings/Tabs/Password/PasswordSettingsTab";
+import ProfileSettingsTab from "components/Pages/App/Settings/Tabs/Profile/ProfileSettingsTab";
+import LanguageSettingsTab from "components/Pages/App/Settings/Tabs/Language/LanguageSettingsTab";
+import AppPageTemplate from "src/templates/AppPageTemplate/AppPageTemplate";
 
 export default {
   name: "SettingsPage",
@@ -77,7 +58,7 @@ export default {
     ProfileSettingsTab,
     PasswordSettingsTab,
     LanguageSettingsTab,
-    UserImage
+    AppPageTemplate
   },
   data() {
     return {

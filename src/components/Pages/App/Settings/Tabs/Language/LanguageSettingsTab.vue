@@ -13,8 +13,8 @@
 </template>
 
 <script>
-import SettingsSelectSection from "pages/Settings/Tabs/Section/Select/SettingsSelectSection";
-import SettingsTab from "pages/Settings/Tabs/SettingsTab";
+import SettingsSelectSection from "components/Pages/App/Settings/Tabs/Section/Select/SettingsSelectSection";
+import SettingsTab from "components/Pages/App/Settings/Tabs/SettingsTab";
 import { Cookies } from "quasar";
 
 export default {

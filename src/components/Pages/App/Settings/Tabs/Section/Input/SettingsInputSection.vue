@@ -28,7 +28,7 @@
 </template>
 
 <script>
-import SettingsSection from "pages/Settings/Tabs/Section/SettingsSection";
+import SettingsSection from "components/Pages/App/Settings/Tabs/Section/SettingsSection";
 
 export default {
   name: "SettingsInputSection",
