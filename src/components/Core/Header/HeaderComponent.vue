@@ -6,7 +6,10 @@
         <HeaderNavigation
           :pages="pages"
         />
-        <UserEntry class="header__user-entry" />
+        <UserEntry
+          class="header__user-entry"
+          menu
+        />
       </div>
       <BurgerMenu
         class="burger-menu"

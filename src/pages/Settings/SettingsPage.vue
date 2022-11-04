@@ -4,12 +4,10 @@
       <div class="top-image" />
       <div class="content">
         <div class="top-part">
-          <q-avatar class="user-image-wrapper">
-            <q-img
-              class="user-image"
-              src="https://sun1-26.userapi.com/s/v1/ig2/LV10_OFN1o0g-pjzVrAIZlg9iPwNxsaSzE2IZTkjvdVNNWcinl88L_zDIWwaGizbTFj4XX24c90UgHwg-9zwxZEN.jpg?size=200x200&quality=95&crop=102,0,581,581&ava=1"
-            />
-          </q-avatar>
+          <UserImage
+            class="user-image-wrapper"
+            editable
+          />
 
           <div class="text">
             <h3 class="title">
@@ -71,13 +69,15 @@
 import PasswordSettingsTab from "pages/Settings/Tabs/Password/PasswordSettingsTab";
 import ProfileSettingsTab from "pages/Settings/Tabs/Profile/ProfileSettingsTab";
 import LanguageSettingsTab from "pages/Settings/Tabs/Language/LanguageSettingsTab";
+import UserImage from "components/Core/UserImage/UserImage";
 
 export default {
   name: "SettingsPage",
   components: {
     ProfileSettingsTab,
     PasswordSettingsTab,
-    LanguageSettingsTab
+    LanguageSettingsTab,
+    UserImage
   },
   data() {
     return {
@@ -144,19 +144,13 @@ export default {
 
         .user-image-wrapper {
           box-sizing: content-box;
-          position: relative;
           align-self: end;
           width: 150px;
           height: 150px;
-          border-radius: 50%;
-          background-color: $grey;
           border: 3px solid $light;
           margin-right: 20px;
           box-shadow: $lite-shadow-2;
 
-          .user-image {
-            height: 100%;
-          }
         }
 
         .text {

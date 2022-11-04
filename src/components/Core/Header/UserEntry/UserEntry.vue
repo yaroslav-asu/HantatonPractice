@@ -18,16 +18,14 @@
       />
     </div>
     <div class="wrapper" v-else>
-      <q-skeleton
-        type="circle"
-        class="user-image-wrapper"
-      />
+      <UserImage class="user-image-wrapper" />
       <div class="account-name">
         {{ userAccount }}
       </div>
       <q-menu
         fit
         :offset="[0, 8]"
+        v-if="menu"
       >
         <q-list>
           <q-item
@@ -48,8 +46,14 @@
 </template>
 
 <script>
+import UserImage from "src/components/Core/UserImage/UserImage.vue";
+
 export default {
   name: "UserEntry",
+  components: {
+    UserImage
+  },
+
   props: {
     menu: Boolean
   },
@@ -68,7 +72,7 @@ export default {
         },
 
         settings: {
-          title: this.$t('pages.settings'),
+          title: this.$t("pages.settings"),
           to: "/settings"
         },
         signOut: {
