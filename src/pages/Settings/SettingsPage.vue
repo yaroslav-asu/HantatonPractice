@@ -79,25 +79,28 @@ export default {
     PasswordSettingsTab,
     LanguageSettingsTab
   },
-
   data() {
     return {
-      activeTab: "profile",
-      tabs: {
+      activeTab: "profile"
+    };
+  },
+  computed: {
+    tabs() {
+      return {
         profile: {
           name: "profile",
-          label: "Profile"
+          label: this.$t("settings.profile.title")
         },
         password: {
           name: "password",
-          label: "Password"
+          label: this.$t("settings.password.title")
         },
         language: {
           name: "language",
-          label: "Language"
+          label: this.$t("settings.language.title")
         }
-      }
-    };
+      };
+    }
   }
 };
 </script>

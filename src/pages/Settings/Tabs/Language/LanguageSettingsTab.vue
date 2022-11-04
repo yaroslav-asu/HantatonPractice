@@ -2,21 +2,20 @@
   <SettingsTab
     :title="$t('settings.language.title')"
     :description="$t('settings.language.description')"
-    :submit-func="()=> {}"
-    :save-button-title="$t('buttons.save')"
+    :buttons="false"
   >
     <SettingsSelectSection
       :title="$t('settings.language.currentLanguage')"
       v-model="model"
       :options="options"
     />
-
   </SettingsTab>
 </template>
 
 <script>
 import SettingsSelectSection from "pages/Settings/Tabs/Section/Select/SettingsSelectSection";
 import SettingsTab from "pages/Settings/Tabs/SettingsTab";
+import { Cookies } from "quasar";
 
 export default {
   name: "LanguageSettingsTab",
@@ -26,13 +25,27 @@ export default {
   },
   data() {
     let options = [
-      { label: "English", value: "en" },
-      { label: "Русский", value: "ru" }
+      { label: "English", value: "en-US" },
+      { label: "Русский", value: "ru-RU" }
     ];
+
     return {
-      model: options[0],
+      model: this.getCurrentLang(options),
       options: options
     };
+  },
+  methods: {
+    getCurrentLang(options) {
+      let savedLocale = Cookies.get("locale");
+      let lang = savedLocale ? savedLocale : this.$i18n.locale;
+      return options.find(option => option.value === lang);
+    }
+  },
+  watch: {
+    model() {
+      Cookies.set("locale", this.model.value);
+      this.$i18n.locale = this.model.value;
+    }
   }
 };
 </script>

@@ -25,7 +25,7 @@ export default {
       required: true
     },
     modelValue: {
-      type: String,
+      type: Object,
       required: true
     },
     options: {
@@ -37,6 +37,14 @@ export default {
     return {
       model: this.modelValue
     };
+  },
+  watch: {
+    model(){
+      this.$emit("update:modelValue", this.model);
+    },
+    modelValue(){
+      this.model = this.modelValue;
+    }
   }
 };
 </script>

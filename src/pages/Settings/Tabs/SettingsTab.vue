@@ -11,7 +11,10 @@
       </p>
     </section>
     <slot />
-    <section class="password-tab_btn-section">
+    <section
+      class="password-tab_btn-section"
+      v-if="buttons"
+    >
       <q-btn
         class="button cancel-btn"
         :label="$t('buttons.cancel')"
@@ -45,12 +48,14 @@ export default {
       required: true
     },
     saveButtonTitle: {
-      type: String,
-      required: true
+      type: String
+    },
+    buttons: {
+      type: Boolean,
+      default: true
     },
     submitFunc: {
-      type: Function,
-      required: true
+      type: Function
     }
   }
 };

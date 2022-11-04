@@ -2,7 +2,7 @@
   <q-layout class="app">
     <div class="limiter">
       <nav class="app-navigation">
-        <LogoComponent class="q-mb-lg" to="/"/>
+        <LogoComponent class="q-mb-lg" to="/" />
         <q-tabs
           class="tabs beautiful-active-tab"
           vertical
@@ -17,7 +17,6 @@
               :class="blockTitle"
             >
               <q-route-tab
-
                 class="tab tab-text_start"
                 content-class="tab-content tab-content-flex"
                 :ripple="false"
@@ -64,8 +63,12 @@ export default {
   },
   data() {
     return {
-      currentTab: this.$route.path.slice(1),
-      links: {
+      currentTab: this.$route.path.slice(1)
+    };
+  },
+  computed: {
+    links() {
+      return {
         "tabs-top": {
           home: {
             icon: "house",
@@ -90,8 +93,8 @@ export default {
             to: "/settings"
           }
         }
-      }
-    };
+      };
+    }
   }
 };
 </script>
@@ -132,6 +135,10 @@ export default {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+
+            .tab {
+              margin: 4px 0 4px 0;
+            }
           }
 
           display: flex;
@@ -153,7 +160,6 @@ export default {
 
     .content {
       width: 80%;
-      //padding: 20px;
     }
   }
 }
