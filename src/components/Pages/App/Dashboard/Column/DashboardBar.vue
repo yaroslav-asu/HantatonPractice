@@ -1,18 +1,17 @@
 <template>
   <DashboardElementWrapper
-    class="dashboard-pie"
     :title="title"
-    iconName="more_vert"
-    color="grey"
+    :description="description"
     :ratio="1"
+    icon-name="more_vert"
   >
-    <div class="pie-chart_wrapper">
-      <PieChart
-        :data-set="dataSet"
-        :colors="colors"
+    <div class="dashboard-bar-chart">
+      <BarChart
+        :data-set="[]"
         :chart-style="{
-          width: '65%',
+          width: '70%'
         }"
+        :color="color"
       />
     </div>
   </DashboardElementWrapper>
@@ -20,12 +19,12 @@
 
 <script>
 import DashboardElementWrapper from "components/Pages/App/Dashboard/DashboardElementWrapper";
-import PieChart from "components/Core/Charts/Pie/PieChart";
+import BarChart from "components/Core/Charts/Bar/BarChart";
 
 export default {
-  name: "DashboardPie",
+  name: "DashboardBar",
   components: {
-    PieChart,
+    BarChart,
     DashboardElementWrapper
   },
   props: {
@@ -36,18 +35,12 @@ export default {
     description: {
       type: String
     },
-    iconName: {
-      type: String
-    },
-    iconColor: {
-      type: String
-    },
     dataSet: {
       type: Array,
       required: true
     },
-    colors: {
-      type: Array,
+    color: {
+      type: String,
       required: true
     }
   }
@@ -55,11 +48,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.pie-chart_wrapper {
+.dashboard-bar-chart{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
   height: 100%;
 }
 </style>

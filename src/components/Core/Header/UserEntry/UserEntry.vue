@@ -19,9 +19,14 @@
     </div>
     <div class="wrapper" v-else>
       <UserImage class="user-image-wrapper" />
-      <div class="account-name">
+      <p
+        class=""
+        :style="{
+            fontSize: emailSize,
+        }"
+      >
         {{ userAccount }}
-      </div>
+      </p>
       <q-menu
         fit
         :offset="[0, 8]"
@@ -53,14 +58,17 @@ export default {
   components: {
     UserImage
   },
-
   props: {
-    menu: Boolean
+    menu: Boolean,
+    emailSize: {
+      type: String,
+      default: "20px"
+    }
   },
   data() {
     return {
       isLoggedIn: true,
-      userAccount: "asdf",
+      userAccount: this.$user.email,
       menuItems: {
         profile: {
           title: this.$t("pages.profile"),
@@ -97,11 +105,5 @@ export default {
     height: 50px;
     margin-right: 15px;
   }
-
-  .account-name {
-    font-size: 20px;
-  }
-
-
 }
 </style>

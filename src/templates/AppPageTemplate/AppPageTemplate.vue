@@ -13,7 +13,7 @@
             {{ title }}
           </h3>
           <p class="email">
-            asdf
+            {{$user.email}}
           </p>
         </div>
       </div>
@@ -53,8 +53,10 @@ export default {
 .top-image {
   height: 25%;
   width: 100%;
-  background: rgb(206, 75, 245);
-  background: linear-gradient(30deg, rgba(206, 75, 245, 1) 0%, rgba(254, 245, 155, 1) 44%, rgba(245, 72, 112, 1) 100%);
+  background-image: url("src/assets/images/accoutnTemplateGradient.jpeg");
+  background-repeat: no-repeat;
+  background-position: 70% 50%;
+  background-size: cover;
   border-radius: 20px 20px 0 0;
   overflow: hidden;
 }

@@ -45,11 +45,10 @@ export default {
   data() {
     return {
       chartOptions: {
-
         responsive: true,
         plugins: {
           tooltip: {
-            enabled: false // <-- this option disables tooltips
+            enabled: false
           },
           legend: {
             display: false

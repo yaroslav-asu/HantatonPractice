@@ -2,7 +2,7 @@
   <q-avatar class="user-image_wrapper">
     <q-img
       class="user-image"
-      src="https://sun1-26.userapi.com/s/v1/ig2/LV10_OFN1o0g-pjzVrAIZlg9iPwNxsaSzE2IZTkjvdVNNWcinl88L_zDIWwaGizbTFj4XX24c90UgHwg-9zwxZEN.jpg?size=200x200&quality=95&crop=102,0,581,581&ava=1"
+      :src="$user.photoUrl"
     />
     <div
       class="edit"
@@ -55,8 +55,7 @@ export default {
 <style lang="scss" scoped>
 .user-image_wrapper {
   box-sizing: content-box;
-  background-color: $grey;
-  overflow: hidden;
+  background-color: $light;
 
   .user-image {
     height: 100%;
@@ -67,10 +66,13 @@ export default {
     width: 100%;
     height: 100%;
     transition: background-color 0.1s ease;
+    border-radius: 50%;
     cursor: pointer;
+
 
     &:hover {
       background-color: rgba(0, 0, 0, 0.5);
+
 
       .edit-icon {
         display: block;

@@ -15,7 +15,7 @@ function colors(count) {
   for (let hue = 0; hue < candidatesCount; hue++) {
     colors.push(hslToHex(hue * 360 / candidatesCount, 75, 65));
   }
-  return colors;
+  return colors.reverse();
 }
 
 export { colors };

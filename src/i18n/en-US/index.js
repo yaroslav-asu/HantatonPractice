@@ -6,7 +6,8 @@ export default {
     team: "Team",
     settings: "Settings",
     dashboard: "Dashboard",
-    profile: "Profile"
+    profile: "Profile",
+    logout: "Logout",
   },
   settings: {
     password: {

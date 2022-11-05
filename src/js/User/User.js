@@ -1,16 +1,38 @@
 export default class User {
-  constructor() {
-    this.email = "";
+  constructor(props) {
+    this.email = props.email ? props.email : "";
     this.password1 = "";
     this.password2 = "";
-    this.imageUrl = "";
-    this.firstName = "";
-    this.lastName = "";
+    this.photoUrl = props.photoUrl ? props.photoUrl : "";
+    this.firstName = props.firstName ? props.firstName : "";
+    this.lastName = props.lastName ? props.lastName : "";
   }
-  login(){
+
+  static register() {
 
   }
-  logout(){
+
+  login() {
 
   }
+
+  logout() {
+
+  }
+
+  changeName(newName) {
+  }
+
+  changeSurname(newSurname) {
+
+  }
+
+  changePassword(newPassword1, newPassword2) {
+
+  }
+
+  changePhoto(newPhotoUrl) {
+
+  }
+
 }

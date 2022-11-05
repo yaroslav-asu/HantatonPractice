@@ -23,6 +23,12 @@
           :data-set="pieDataSet"
           :colors="colors"
         />
+        <DashboardBar
+          title="title"
+          description="description"
+          :data-set="[]"
+          :color="colors[0]"
+        />
       </div>
     </AppPagesWrapper>
   </q-page>
@@ -33,10 +39,12 @@ import AppPagesWrapper from "components/Pages/App/AppPagesWrapper";
 import DashboardProgress from "components/Pages/App/Dashboard/Progress/DashboardProgress";
 import DashboardPie from "components/Pages/App/Dashboard/Pie/DashboardPie";
 import { colors } from "src/js/Dashboard/Dashboard";
+import DashboardBar from "components/Pages/App/Dashboard/Column/DashboardBar";
 
 export default {
   name: "DashboardPage",
   components: {
+    DashboardBar,
     DashboardPie,
     AppPagesWrapper,
     DashboardProgress

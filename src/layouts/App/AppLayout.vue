@@ -41,13 +41,13 @@
         </div>
         <UserEntry
           class="user-entry navigation-el--bordered"
+          email-size="14px"
         />
       </nav>
       <q-page-container class="content">
         <router-view />
       </q-page-container>
     </div>
-
   </q-layout>
 </template>
 
