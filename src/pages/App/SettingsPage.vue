@@ -1,6 +1,7 @@
 <template>
   <AppPageTemplate
     :title="$t('pages.settings')"
+    editable-user-image
   >
     <q-tabs
       align="left"

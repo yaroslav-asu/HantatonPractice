@@ -5,6 +5,7 @@
       <div class="top-part">
         <UserImage
           class="user-image-wrapper"
+          :editable="editableUserImage"
         />
 
         <div class="text">
@@ -40,8 +41,10 @@ export default {
     title: {
       type: String,
       required: true
-    }
+    },
+    editableUserImage: Boolean
   }
+
 };
 </script>
 

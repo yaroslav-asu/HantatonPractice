@@ -104,7 +104,6 @@ export default {
   ],
   mounted() {
     this.type = this.$route.path.replace("/", "");
-    console.log("asdf", this.type);
   },
   data() {
     return {
@@ -115,7 +114,7 @@ export default {
     };
   },
   watch: {
-    $route(to, from) {
+    $route(to) {
       this.type = to.path.replace("/", "");
       this.$refs.form.resetValidation();
     }

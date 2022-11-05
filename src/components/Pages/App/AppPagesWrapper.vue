@@ -1,6 +1,6 @@
 <template>
   <q-page class="settings-page ">
-    <div class="wrapper">
+    <div class="wrapper" :style="wrapperStyle">
       <slot />
     </div>
   </q-page>
@@ -8,7 +8,12 @@
 
 <script>
 export default {
-  name: "AppPagesWrapper"
+  name: "AppPagesWrapper",
+  props: {
+    wrapperStyle: {
+      type: Object,
+    }
+  }
 };
 </script>
 
