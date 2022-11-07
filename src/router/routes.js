@@ -28,6 +28,13 @@ const routes = [
     ]
   },
   {
+    path: "/user-card/:id",
+    component: () => import("layouts/App/AppLayout.vue"),
+    children: [
+      { path: "", component: () => import("pages/App/UserCardPage.vue") }
+    ]
+  },
+  {
     path: "/login",
     component: () => import("layouts/UserEntry/UserEntryLayout.vue")
   },
