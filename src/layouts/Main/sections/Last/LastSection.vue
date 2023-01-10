@@ -35,6 +35,7 @@ export default {
   .start-part {
     height: 100%;
     background-image: url("assets/images/laptop.jpg");
+    background-repeat: no-repeat;
 
     .limiter {
       height: 100%;
