@@ -14,6 +14,7 @@
           :description="progress.description"
           :iconName="progress.iconName"
           :color="colors[index]"
+          :value="Math.random()"
         />
       </div>
       <div class="col-wrapper three-cols">
@@ -24,6 +25,12 @@
           :colors="colors"
         />
         <DashboardBar
+          title="title"
+          description="description"
+          :data-set="[]"
+          :color="colors[0]"
+        />
+        <DashboardLine
           title="title"
           description="description"
           :data-set="[]"
@@ -40,14 +47,16 @@ import DashboardProgress from "components/Pages/App/Dashboard/Progress/Dashboard
 import DashboardPie from "components/Pages/App/Dashboard/Pie/DashboardPie";
 import { colors } from "src/js/Dashboard/Dashboard";
 import DashboardBar from "components/Pages/App/Dashboard/Column/DashboardBar";
+import DashboardLine from "components/Pages/App/Dashboard/Line/DashboardLine.vue";
 
 export default {
   name: "DashboardPage",
   components: {
     DashboardBar,
     DashboardPie,
+    DashboardLine,
     AppPagesWrapper,
-    DashboardProgress
+    DashboardProgress,
   },
   computed: {
     colors() {

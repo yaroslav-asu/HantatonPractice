@@ -16,7 +16,7 @@
         :animation-speed="700"
       />
       <p class="percentage">
-        {{ progress * 100 + "%" }}
+        {{ Math.floor(progress * 100) + "%" }}
       </p>
     </div>
   </DashboardElementWrapper>
@@ -27,7 +27,7 @@ import DashboardElementWrapper from "components/Pages/App/Dashboard/DashboardEle
 
 export default {
   name: "DashboardProgress",
-  components: { DashboardElementWrapper },
+  components: {DashboardElementWrapper},
 
   props: {
     title: {
@@ -47,7 +47,7 @@ export default {
     },
     value: {
       type: Number,
-      default: 0.5
+      default: 0.5,
     },
   },
   data() {

@@ -4,7 +4,6 @@
       :chart-options="chartOptions"
       :chart-data="chartData"
       :style="chartStyle"
-
     />
     <div class="pie-legend">
       <div

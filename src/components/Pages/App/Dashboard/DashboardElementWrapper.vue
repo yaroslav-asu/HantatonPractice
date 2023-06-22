@@ -60,6 +60,7 @@ export default {
   border: 2px solid $grey;
   display: flex;
   flex-direction: column;
+  background: white;
 
 
   .text-wrapper {

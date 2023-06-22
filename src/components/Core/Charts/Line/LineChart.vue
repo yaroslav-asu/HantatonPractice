@@ -1,6 +1,6 @@
 <template>
-  <div class="bar-chart">
-    <Bar
+  <div class="line-chart">
+    <Line
       :chart-options="chartOptions"
       :chart-data="chartData"
       :style="chartStyle"
@@ -9,13 +9,13 @@
 </template>
 
 <script>
-import "chart.js/auto";
-import { Bar } from "vue-chartjs";
+import {Line} from "vue-chartjs";
 
 export default {
-  name: "BarChart",
+  name: "PieChart",
   components: {
-    Bar
+    // eslint-disable-next-line vue/no-reserved-component-names
+    Line,
   },
   props: {
     dataSet: {
@@ -34,11 +34,11 @@ export default {
   data() {
     return {
       chartData: {
-        labels: [10, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+        labels: ["june", "july", "august", 4, 5, 6, 7, 8, 9, 10],
         datasets: [
           {
             label: "Fully Rounded",
-            data: [11, 5, 1, 3, 10, 18, 10, 12, 1, 16],
+            data: [1, 10, 101, 21, 17, 18, 11, 51, 11, 31],
             backgroundColor: this.color,
             borderSkipped: false,
             borderRadius: 10,
@@ -61,31 +61,39 @@ export default {
           xAxis: {
             offset: true,
             ticks: {
-              display: false
+              display: true
             },
             grid: {
-              display: false,
-              drawBorder: false
+              display: true,
+              drawBorder: true
             }
           },
           yAxis: {
             ticks: {
-              display: false
+              display: true
             },
             grid: {
-              display: false,
-              drawBorder: false
+              display: true,
+              drawBorder: true
             }
           }
         }
       }
     };
+  },
+  computed: {
+    styles() {
+      return {
+        height: '100px',
+        position: 'relative',
+      }
+    }
   }
-};
+}
 </script>
 
-<style lang="scss" scoped>
-.bar-chart {
+<style scoped lang="scss">
+.line-chart {
   width: 100%;
   height: 100%;
   display: flex;
