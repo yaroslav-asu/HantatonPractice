@@ -19,30 +19,29 @@ import ServiceFeatures from "components/Core/ServiceFeatures/ServiceFeatures";
 
 export default {
   name: "ThirdSection",
-  components: { ServiceFeatures },
+  components: {ServiceFeatures},
   data() {
-    return {
-
-    };
+    return {};
   }
 };
 </script>
 
 <style lang="scss" scoped>
 .third-section {
-  height: 100vh;
-  .limiter{
+  .limiter {
     height: 100%;
     display: flex;
     flex-direction: column;
   }
 }
-.features-wrapper{
+
+.features-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-grow: 1;
-  .service-feature{
+
+  .service-feature {
     max-width: 1000px;
     width: 100%;
   }

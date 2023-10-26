@@ -8,6 +8,39 @@ export default {
     dashboard: "Панель управления",
     profile: "Профиль",
     logout: "Выйти",
+    about: "О нас",
+    functionality: "Возможности",
+  },
+  dashboard: {
+    progress: {
+      1: {
+        title: "Подготовка",
+        description: "Подготовка к проекту",
+      },
+      2: {
+        title: "Дизайн",
+        description: "Создание дизайна",
+      },
+      3: {
+        title: "Разработка",
+        description: "Разработка сайта",
+      },
+      4: {
+        title: "Тестирование",
+        description: "Тестирование сайта",
+      }
+    },
+    pie: {
+      title: "Статистика",
+    },
+    bar: {
+      title: "Последние проекты",
+      description: "Последние проекты, над которыми вы работали",
+    },
+    line: {
+      title: "Проекты",
+      description: "Проекты, над которыми вы работали",
+    }
   },
   settings: {
     password: {
@@ -97,6 +130,10 @@ export default {
   menu: "Меню",
   login: "Войти",
   signUp: "Регистрация",
+  signup: "Регистрация",
+  register: "Регистрация",
+  forgotPassword: "Забыли пароль?",
+  rememberMe: "Запомнить меня",
   email: "Электронная почта",
   password: "Пароль",
   dontHaveAccount: "У вас нет аккаунта?",
@@ -112,5 +149,43 @@ export default {
     save: "Сохранить"
   },
   firstName: "Имя",
-  lastName: "Фамилия"
+  lastName: "Фамилия",
+  serviceFeatures: {
+    1: {
+      title: "Быстро",
+      description: "Очень быстро"
+    },
+    2: {
+      title: "Удобный для пользователей",
+      description: "Очень удобный для пользователей"
+    },
+    3: {
+      title: "Безопасный",
+      description: "Очень безопасный"
+    },
+    4: {
+      title: "Информативный",
+      description: "Высоко информативный"
+    },
+    5: {
+      title: "Настраиваемый",
+      description: "Очень настраиваемый"
+    },
+    6: {
+      title: "Многоязычный",
+      description: "Поддерживает несколько языков"
+    },
+    7: {
+      title: "Адаптивный",
+      description: "Полностью адаптивный дизайн"
+    },
+    8: {
+      title: "Экономичный",
+      description: "Экономичное решение"
+    },
+    9: {
+      title: "Экономия времени",
+      description: "Экономит ваше время"
+    }
+  }
 };

@@ -11,7 +11,7 @@
         :data-set="dataSet"
         :colors="colors"
         :chart-style="{
-          width: '65%',
+          width: '65%'
         }"
       />
     </div>

@@ -34,7 +34,7 @@ export default {
   data() {
     return {
       chartData: {
-        labels: ["june", "july", "august", 4, 5, 6, 7, 8, 9, 10],
+        labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
         datasets: [
           {
             label: "Fully Rounded",

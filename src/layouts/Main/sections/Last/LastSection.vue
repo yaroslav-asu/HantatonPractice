@@ -11,9 +11,9 @@
             :label="$t('letsStart')"
             no-caps
             :ripple="false"
+            @click="$router.push('/register')"
           />
         </div>
-
       </div>
     </div>
 
@@ -30,7 +30,6 @@ export default {
 <style lang="scss" scoped>
 .last-section {
   padding-top: $header-height;
-  height: 100vh;
 
   .start-part {
     height: 100%;
@@ -46,14 +45,17 @@ export default {
       .content {
         max-width: 650px;
         text-align: right;
-        .content__button{
+
+        .content__button {
           width: 140px;
         }
-        .category-title{
+
+        .category-title {
           margin-bottom: 40px;
           opacity: 0.9;
         }
-        .description{
+
+        .description {
           margin-bottom: 80px;
           font-size: 45px;
         }

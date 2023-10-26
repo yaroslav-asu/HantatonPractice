@@ -8,34 +8,36 @@
     >
       <div class="col-wrapper four-cols">
         <DashboardProgress
-          v-for="(progress,index) in progressList"
-          :key="progress"
-          :title="progress.title"
-          :description="progress.description"
-          :iconName="progress.iconName"
+          v-for="(image,index) in progressImages"
+          :key="image"
+          :title="$t(`dashboard.progress.${index + 1}.title`)"
+          :description="$t(`dashboard.progress.${index + 1}.description`)"
+          :iconName="image"
           :color="colors[index]"
           :value="Math.random()"
         />
       </div>
-      <div class="col-wrapper three-cols">
+      <div class="blocks_wrapper">
         <DashboardPie
-          title="title"
-          description="description"
+          :title="$t('dashboard.pie.title')"
           :data-set="pieDataSet"
           :colors="colors"
+          class="pie"
         />
-        <DashboardBar
-          title="title"
-          description="description"
-          :data-set="[]"
-          :color="colors[0]"
-        />
-        <DashboardLine
-          title="title"
-          description="description"
-          :data-set="[]"
-          :color="colors[0]"
-        />
+        <div class="col">
+          <DashboardBar
+            :title="$t('dashboard.bar.title')"
+            :description="$t('dashboard.bar.description')"
+            :data-set="[]"
+            :color="colors[0]"
+          />
+          <DashboardLine
+            :title="$t('dashboard.line.title')"
+            :description="$t('dashboard.line.description')"
+            :data-set="[]"
+            :color="colors[0]"
+          />
+        </div>
       </div>
     </AppPagesWrapper>
   </q-page>
@@ -45,7 +47,7 @@
 import AppPagesWrapper from "components/Pages/App/AppPagesWrapper";
 import DashboardProgress from "components/Pages/App/Dashboard/Progress/DashboardProgress";
 import DashboardPie from "components/Pages/App/Dashboard/Pie/DashboardPie";
-import { colors } from "src/js/Dashboard/Dashboard";
+import {colors} from "src/js/Dashboard/Dashboard";
 import DashboardBar from "components/Pages/App/Dashboard/Column/DashboardBar";
 import DashboardLine from "components/Pages/App/Dashboard/Line/DashboardLine.vue";
 
@@ -60,64 +62,47 @@ export default {
   },
   computed: {
     colors() {
-      return colors(Math.max(this.progressList.length, this.pieDataSet.length));
+      return colors(Math.max(this.progressImages.length, this.pieDataSet.length));
     },
-    progressList() {
+    progressImages() {
+      return [
+        "payments",
+        "maps_home_work",
+        "data_thresholding",
+        "data_thresholding",
+      ];
+    },
+    pieDataSet() {
       return [
         {
-          title: "Progress",
-          description: "This is a progress bar",
-          iconName: "payments"
+          label: "1",
+          value: 10
         },
         {
-          title: "Progress",
-          description: "This is a progress bar",
-          iconName: "maps_home_work"
+          label: "2",
+          value: 20
         },
         {
-          title: "Progress",
-          description: "This is a progress bar",
-          iconName: "data_thresholding"
+          label: "3",
+          value: 30
         },
         {
-          title: "Progress",
-          description: "This is a progress bar",
-          iconName: "data_thresholding"
+          label: "4",
+          value: 40
         }
       ];
     }
   },
-  data() {
-    return {
-      pieDataSet: [
-        {
-          label: "Green",
-          value: 50
-        },
-        {
-          label: "Yellow",
-          value: 40
-        }, {
-          label: "Yellow",
-          value: 40
-        },
-        {
-          label: "Yellow",
-          value: 40
-        }
-      ]
-    };
-  }
 };
 </script>
 
 <style lang="scss" scoped>
 @function get-column($columns) {
-  @return repeat($columns, calc(100% / #{$columns} - 15px * calc((#{$columns} - 1) / #{$columns})));
+  @return repeat($columns, calc(100% / #{$columns} - 20px * calc((#{$columns} - 1) / #{$columns})));
 }
 
 .col-wrapper {
-  margin: 7.5px 0 7.5px 0;
+  margin: 20px 0;
   display: grid;
   grid-gap: 15px;
 }
@@ -134,4 +119,19 @@ export default {
   grid-template-columns: get-column(4);
 }
 
+.blocks_wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+
+  .pie {
+    width: 60%;
+  }
+
+  .col {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
 </style>

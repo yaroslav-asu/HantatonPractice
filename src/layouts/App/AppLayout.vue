@@ -2,7 +2,9 @@
   <q-layout class="app">
     <div class="limiter">
       <nav class="app-navigation">
-        <LogoComponent class="q-mb-lg" to="/" />
+        <router-link to="/">
+          <LogoComponent class="q-mb-lg"/>
+        </router-link>
         <q-tabs
           class="tabs beautiful-active-tab"
           vertical
@@ -36,16 +38,13 @@
             </div>
           </div>
         </q-tabs>
-        <div class="navigation-info navigation-el--bordered q-my-lg">
-
-        </div>
         <UserEntry
           class="user-entry navigation-el--bordered"
           email-size="14px"
         />
       </nav>
       <q-page-container class="content">
-        <router-view />
+        <router-view/>
       </q-page-container>
     </div>
   </q-layout>
@@ -79,9 +78,7 @@ export default {
             icon: "chart-line",
             title: this.$t("pages.dashboard"),
             to: "/dashboard"
-          }
-        },
-        "tabs-bottom": {
+          },
           profile: {
             icon: "circle-user",
             title: this.$t("pages.profile"),
@@ -92,10 +89,12 @@ export default {
             title: this.$t("pages.settings"),
             to: "/settings"
           },
+        },
+        "tabs-bottom": {
           logout: {
             icon: "arrow-right-from-bracket",
             title: this.$t("pages.logout"),
-            to: "/logout"
+            to: "/"
           }
         }
       };
@@ -121,6 +120,7 @@ export default {
 
       .tabs {
         flex-grow: 1;
+        padding: 20px 0;
 
         .app-navigation__tabs-content {
           .q-tab {

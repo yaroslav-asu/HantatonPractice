@@ -9,8 +9,12 @@
     />
     <ServiceFeature
       class="border"
-      v-for="el in serviceFeatures.currentPage"
-      :service-feature="el"
+      v-for="(el, id) in serviceFeatures.currentPage"
+      :service-feature="{
+        ...el,
+      title: $t(`serviceFeatures.${id + 1}.title`),
+      description: $t(`serviceFeatures.${id + 1}.description`),
+      }"
       :key="el"
     />
     <FeaturesButton
@@ -40,81 +44,62 @@ export default {
         {
           icon: "assignment_ind",
           iconColor: "orange",
-          title: "Fast",
-          description: "Very fast",
-          link: "/a"
+          link: "/"
         },
         {
           icon: "search",
           iconColor: "purple",
-          title: "User friendly",
-          description: "Very user friendly",
-          link: "/a"
+          link: "/"
         },
         {
-          icon: "home",
+          icon: "favorite_border",
           iconColor: "red",
-          title: "title",
-          description: "description",
-          link: "/a"
+          link: "/"
         },
         {
-          icon: "assignment_ind",
+          icon: "insert_chart",
+          iconColor: "blue",
+          link: "/"
+        },
+        {
+          icon: "settings",
+          iconColor: "green",
+          link: "/"
+        },
+        {
+          icon: "language",
           iconColor: "orange",
-          title: "Fast",
-          description: "Very fast",
-          link: "/a"
+          link: "/"
         },
         {
-          icon: "search",
-          iconColor: "purple",
-          title: "User friendly",
-          description: "Very user friendly",
-          link: "/a"
+          icon: "devices",
+          iconColor: "teal",
+          link: "/"
         },
         {
-          icon: "home",
-          iconColor: "red",
-          title: "title",
-          description: "description",
-          link: "/a"
+          icon: "attach_money",
+          iconColor: "green",
+          link: "/"
         },
         {
-          icon: "home",
-          iconColor: "red",
-          title: "title",
-          description: "description",
-          link: "/a"
-        }, {
-          icon: "home",
-          iconColor: "red",
-          title: "title",
-          description: "description",
-          link: "/a"
-        },
-        {
-          icon: "home",
-          iconColor: "red",
-          title: "title",
-          description: "description",
-          link: "/a"
-        }, {
-          icon: "home",
-          iconColor: "red",
-          title: "title",
-          description: "description",
-          link: "/a"
-        },
-        {
-          icon: "home",
-          iconColor: "red",
-          title: "title",
-          description: "description",
-          link: "/a"
+          icon: "access_time",
+          iconColor: "indigo",
+          link: "/"
         }
       ])
     };
-  }
+  },
+  // computed: {
+  //   features: () => {
+  //     const features =
+  //     return features.map((el, index) => {
+  //       return {
+  //         ...el,
+  //         title: this.$t(`features.${index + 1}.title`),
+  //       }
+  //     })
+  //   }
+  // },
 };
 </script>
 

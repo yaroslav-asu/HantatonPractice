@@ -18,7 +18,7 @@
           </template>
         </q-input>
         <q-input
-          v-model="password1"
+          v-model="password"
           class="full-width  q-mb-md"
           :label="$t('password')"
           :rules="passwordRule"
@@ -63,6 +63,7 @@
           :label="type=== 'login' ? $t('login') : $t('signup')"
           color="primary"
           :ripple="false"
+          no-caps
         />
         <p class="help-text q-mt-lg">
           {{ type === "login" ? $t("dontHaveAccount") : $t("alreadyHaveAccount") }}
@@ -82,9 +83,10 @@
       </q-form>
     </div>
     <div class="bc-block">
-      <q-img
-        class="clay-laptop_img"
+      <img
+        class="user_entry-img"
         src="~assets/images/UserEntry.svg"
+        alt=""
       />
     </div>
   </div>
@@ -108,10 +110,16 @@ export default {
   data() {
     return {
       email: "",
+      password: "",
       password1: "",
       remember: false,
       type: null
     };
+  },
+  methods: {
+    onSubmit(){
+      this.$router.push("/dashboard");
+    }
   },
   watch: {
     $route(to) {
@@ -150,7 +158,6 @@ export default {
         border-radius: 80px;
       }
     }
-
   }
 
   .bc-block {
@@ -164,7 +171,7 @@ export default {
     border-radius: 80px;
     transform-origin: center center;
 
-    .clay-laptop_img {
+    .user_entry-img {
       position: relative;
       width: 40%;
       left: 10%;

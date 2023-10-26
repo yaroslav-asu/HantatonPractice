@@ -44,7 +44,6 @@ export default {
     },
     editableUserImage: Boolean
   }
-
 };
 </script>
 

@@ -1,15 +1,14 @@
-
 <template>
   <q-page>
-    <FirstSection />
-    <SecondSection />
-    <ThirdSection />
+    <FirstSection id="greeting"/>
+    <SecondSection id="about"/>
+    <ThirdSection id="functionality"/>
     <LastSection/>
   </q-page>
 </template>
 
 <script>
-import { defineComponent } from "vue";
+import {defineComponent} from "vue";
 import FirstSection from "src/layouts/Main/sections/First/FirstSection.vue";
 import SecondSection from "src/layouts/Main/sections/Second/SecondSection";
 import ThirdSection from "src/layouts/Main/sections/Third/ThirdSection";
@@ -28,17 +27,12 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-.first-section {
-  height: 100vh;
-}
 
 .second-section {
   padding-top: $header-height;
-  height: 100vh;
 }
 
 .third-section {
   padding-top: $header-height;
-  height: 100vh;
 }
 </style>

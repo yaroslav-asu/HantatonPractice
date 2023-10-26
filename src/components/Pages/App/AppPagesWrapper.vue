@@ -1,7 +1,6 @@
 <template>
   <q-page class="settings-page ">
     <div class="wrapper" :style="wrapperStyle">
-
       <slot />
     </div>
   </q-page>

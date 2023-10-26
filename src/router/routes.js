@@ -36,11 +36,11 @@ const routes = [
   },
   {
     path: "/login",
-    component: () => import("layouts/UserEntry/UserEntryLayout.vue")
+    component: () => import("layouts/Auth/Auth.vue")
   },
   {
     path: "/register",
-    component: () => import("layouts/UserEntry/UserEntryLayout.vue")
+    component: () => import("layouts/Auth/Auth.vue")
   },
   {
     path: "/:catchAll(.*)*",

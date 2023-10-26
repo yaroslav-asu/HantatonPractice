@@ -8,7 +8,14 @@
         <h3 class="site-description q-mb-xl">
           {{ $t("firstSection.description") }}
         </h3>
-        <EmailInput />
+        <q-btn
+          :label="$t('signUp')"
+          color="primary"
+          class="button big-button"
+          :ripple="false"
+          no-caps
+          to="/register"
+        />
       </div>
       <div class="images-part">
 
@@ -22,20 +29,21 @@
 </template>
 
 <script>
-import EmailInput from "components/Core/EmailInput/EmailInput";
 
 export default {
-  name: "FirstSection",
-  components: {
-    EmailInput
-  },
+  name: "FirstSection"
 };
 </script>
 
 <style lang="scss" scoped>
+.button {
+  border-radius: 5px;
+  width: 30%;
+}
 
 .first-section {
   position: relative;
+
   .limiter {
     height: 100%;
 
@@ -61,8 +69,4 @@ export default {
     }
   }
 }
-
-
-
-
 </style>

@@ -6,13 +6,7 @@
       class="input"
       :placeholder="$t('emailInput.placeholder')"
       />
-    <q-btn
-      :label="$t('signUp')"
-      color="primary"
-      class="button big-button"
-      :ripple="false"
-      no-caps
-    />
+
   </div>
 
 </template>
@@ -46,8 +40,5 @@ export default {
   font-size: 20px;
 }
 
-.button {
-  border-radius: 5px;
-  width: 30%;
-}
+
 </style>

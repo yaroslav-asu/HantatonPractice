@@ -18,7 +18,6 @@ export default {
     HeaderComponent,
     FooterComponent
   }
-
 };
 </script>
 

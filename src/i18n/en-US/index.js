@@ -8,6 +8,39 @@ export default {
     dashboard: "Dashboard",
     profile: "Profile",
     logout: "Logout",
+    about: "About",
+    functionality: "Functionality",
+  },
+  dashboard: {
+    progress: {
+      1: {
+        title: "Preparation",
+        description: "Preparing for the project"
+      },
+      2: {
+        title: "Design",
+        description: "Creating design"
+      },
+      3: {
+        title: "Development",
+        description: "Website development"
+      },
+      4: {
+        title: "Testing",
+        description: "Website testing"
+      }
+    },
+    pie: {
+      title: "Statistics"
+    },
+    bar: {
+      title: "Recent Projects",
+      description: "Recent projects you've worked on"
+    },
+    line: {
+      title: "Projects",
+      description: "Projects you've worked on"
+    }
   },
   settings: {
     password: {
@@ -97,6 +130,7 @@ export default {
   menu: "Menu",
   login: "Login",
   signUp: "Sign up",
+  signup: "Sign up",
   email: "Email",
   password: "Password",
   register: "Register",
@@ -118,5 +152,43 @@ export default {
     save: "Save"
   },
   firstName: "First name",
-  lastName: "Last name"
+  lastName: "Last name",
+  serviceFeatures: {
+    1: {
+      title: "Fast",
+      description: "Very fast"
+    },
+    2: {
+      title: "User friendly",
+      description: "Very user friendly"
+    },
+    3: {
+      title: "Secure",
+      description: "Very secure"
+    },
+    4: {
+      title: "Informative",
+      description: "Highly informative"
+    },
+    5: {
+      title: "Customizable",
+      description: "Highly customizable"
+    },
+    6: {
+      title: "Multilingual",
+      description: "Supports multiple languages"
+    },
+    7: {
+      title: "Responsive",
+      description: "Fully responsive design"
+    },
+    8: {
+      title: "Cost-effective",
+      description: "Cost-effective solution"
+    },
+    9: {
+      title: "Time-saving",
+      description: "Saves you time"
+    }
+  }
 };

@@ -16,12 +16,9 @@
       </div>
       <div class="photo-part">
         <div class="photo-wrapper photo">
-          <q-img class="photo-wrapper__photo" src="~assets/images/woman.jpg" />
+          <q-img class="photo-wrapper__photo" src="~assets/images/woman.jpg"/>
         </div>
-        <div class="photo-wrapper fake-photo" />
-        <div class="help-data">
-
-        </div>
+        <div class="photo-wrapper fake-photo"/>
       </div>
     </div>
   </section>
@@ -29,7 +26,7 @@
 
 <script>
 import ServiceProsElement from "components/Core/ServicePros/ServiceProsElement";
-import { ServiceProsClass } from "src/js/ServiceProsClass";
+import {ServiceProsClass} from "src/js/ServiceProsClass";
 
 export default {
   name: "SecondSection",
@@ -67,7 +64,6 @@ export default {
 
 <style lang="scss" scoped>
 .second-section {
-  height: 100vh;
   display: flex;
   align-items: center;
 
@@ -121,24 +117,7 @@ export default {
         z-index: 0;
         rotate: 2deg;
       }
-
-      .help-data {
-        width: 250px;
-        height: 170px;
-        background-color: rgba($light, 0.53);
-        position: absolute;
-        border-radius: $border-radius;
-        right: 0;
-        bottom: 50%;
-        translate: 0 50%;
-        z-index: 2;
-        box-shadow: $lite-shadow;
-        backdrop-filter: blur(4.5px);
-        -webkit-backdrop-filter: blur(4.5px);
-      }
     }
   }
 }
-
-
 </style>

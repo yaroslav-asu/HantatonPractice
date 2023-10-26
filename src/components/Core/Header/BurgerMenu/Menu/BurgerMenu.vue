@@ -1,7 +1,7 @@
 <template>
   <div class="burger-menu_wrapper">
     <BurgerMenuButton
-    @click="isOpen = !isOpen"
+      @click="isOpen = !isOpen"
     />
     <nav
       class="burger-menu"
@@ -17,14 +17,13 @@
         :key="page.title"
         class="burger-menu_link"
         :to="page.link"
+        @click="isOpen = false"
       >
-        {{ $t(`header.navigation.${page.title}`) }}
+        {{ $t(`pages.${page.title}`) }}
       </router-link>
       <UserEntry class="user-entry"/>
     </nav>
   </div>
-
-
 </template>
 
 <script>
@@ -81,9 +80,10 @@ export default {
 
     .burger-menu_link {
       font-size: 26px;
-      margin: 10px 0 ;
+      margin: 10px 0;
     }
-    .user-entry{
+
+    .user-entry {
       margin-top: 60px;
     }
 

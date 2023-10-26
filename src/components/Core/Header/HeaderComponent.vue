@@ -1,7 +1,9 @@
 <template>
   <header class="header q-py-sm">
     <div class="limiter">
-      <LogoComponent to="/"/>
+      <router-link to="/">
+        <LogoComponent/>
+      </router-link>
       <div class="content flex">
         <HeaderNavigation
           :pages="pages"
@@ -38,19 +40,15 @@ export default {
       pages: {
         home: {
           title: "home",
-          link: "/"
+          link: "#greeting"
         },
-        portfolio: {
-          title: "portfolio",
-          link: "/portfolio"
+        about: {
+          title: "about",
+          link: '#about'
         },
-        howItWorks: {
-          title: "howItWorks",
-          link: "/how-it-works"
-        },
-        team: {
-          title: "team",
-          link: "/team"
+        functionality: {
+          title: "functionality",
+          link: "#functionality"
         }
       }
     };
@@ -75,6 +73,7 @@ export default {
         margin-left: 100px;
       }
     }
+
     .burger-menu {
       display: none;
     }
