@@ -19,3 +19,12 @@ quasar dev
 ```bash
 quasar build
 ```
+
+## Site Map
+| Url               | Page                  |
+|-------------------|-----------------------|
+| /                 | Landing               |
+| /login, /register | User authentification |
+| /profile          | User account          |
+| /dashboard        | User dashboard        |
+| /settings         | User settings         |
