@@ -1,8 +1,8 @@
 {
-  "name": "practichackatonproject",
+  "name": "practichackathonproject",
   "version": "0.0.1",
   "description": "A Quasar Project",
-  "productName": "Practic Hackaton Project",
+  "productName": "Practic Hackathon Project",
   "author": "yaroslav <yaroslav_filippov_2017@mail.ru>",
   "private": true,
   "scripts": {

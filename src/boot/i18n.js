@@ -1,11 +1,17 @@
-import { boot } from "quasar/wrappers";
-import { createI18n } from "vue-i18n";
+import {boot} from "quasar/wrappers";
+import {createI18n} from "vue-i18n";
 import messages from "src/i18n";
-import { Cookies } from "quasar";
-import { Quasar } from "quasar";
+import {Quasar} from "quasar";
 
-let savedLocale = Cookies.get("locale");
-let locale = savedLocale ? savedLocale : Quasar.lang.getLocale();
+
+let locale = Quasar.lang.getLocale().toLowerCase()
+if (locale.includes('ru') || locale.includes('by') || locale.includes('ua')) {
+  locale = 'ru-RU'
+} else if (locale.includes('en') || locale.includes('us') || locale.includes('uk')) {
+  locale = 'en-US'
+} else {
+  locale = 'en-US'
+}
 
 const i18n = createI18n({
   locale: locale,
@@ -13,10 +19,10 @@ const i18n = createI18n({
 });
 const t = i18n.global.t;
 
-export default boot(({ app }) => {
+export default boot(({app}) => {
   app.use(
     i18n
   );
 });
 
-export { t };
+export {t};

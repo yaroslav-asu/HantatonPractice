@@ -1,4 +1,4 @@
-# Practic Hackaton Project
+# Practic Hackathon Project
 
 A Quasar Project that created to prepare for ugra hackathon
 
@@ -24,7 +24,7 @@ quasar build
 | Url               | Page                  |
 |-------------------|-----------------------|
 | /                 | Landing               |
-| /login, /register | User authentification |
+| /login, /register | User authentication   |
 | /profile          | User account          |
 | /dashboard        | User dashboard        |
 | /settings         | User settings         |
