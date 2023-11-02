@@ -86,9 +86,6 @@ export default {
     .user-entry {
       margin-top: 60px;
     }
-
   }
-
 }
-
 </style>
