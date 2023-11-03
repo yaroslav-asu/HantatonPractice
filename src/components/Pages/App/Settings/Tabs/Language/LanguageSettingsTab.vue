@@ -7,7 +7,7 @@
     <SettingsSelectSection
       :title="$t('settings.language.currentLanguage')"
       v-model="model"
-      :options="options"
+      :options="languageSwitcher.options"
     />
   </SettingsTab>
 </template>
@@ -15,7 +15,8 @@
 <script>
 import SettingsSelectSection from "components/Pages/App/Settings/Tabs/Section/Select/SettingsSelectSection";
 import SettingsTab from "components/Pages/App/Settings/Tabs/SettingsTab";
-import { Cookies } from "quasar";
+import {Cookies} from "quasar";
+import LanguageSwitcher from "src/js/LanguageSwitcher";
 
 export default {
   name: "LanguageSettingsTab",
@@ -24,27 +25,19 @@ export default {
     SettingsSelectSection
   },
   data() {
-    let options = [
-      { label: "English", value: "en-US" },
-      { label: "Русский", value: "ru-RU" }
+    const languages = [
+      {label: "English", value: "en-US"},
+      {label: "Русский", value: "ru-RU"}
     ];
-
+    const languageSwitcher = new LanguageSwitcher(this.$i18n, languages)
     return {
-      model: this.getCurrentLang(options),
-      options: options
+      model: languageSwitcher.currentLang,
+      languageSwitcher,
     };
-  },
-  methods: {
-    getCurrentLang(options) {
-      let savedLocale = Cookies.get("locale");
-      let lang = savedLocale ? savedLocale : this.$i18n.locale;
-      return options.find(option => option.value === lang);
-    }
   },
   watch: {
     model() {
-      Cookies.set("locale", this.model.value);
-      this.$i18n.locale = this.model.value;
+      this.languageSwitcher.changeLang(this.model);
     }
   }
 };

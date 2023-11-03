@@ -8,6 +8,7 @@
         <HeaderNavigation
           :pages="pages"
         />
+        <LanguageSwitcher/>
         <UserEntry
           class="header__user-entry"
           menu
@@ -26,10 +27,12 @@ import LogoComponent from "components/Core/Logo/LogoComponent";
 import HeaderNavigation from "components/Core/Header/Naviagation/HeaderNavigation";
 import UserEntry from "components/Core/Header/UserEntry/UserEntry";
 import BurgerMenu from "components/Core/Header/BurgerMenu/Menu/BurgerMenu";
+import LanguageSwitcher from "components/Core/Header/LanguageSwitcher.vue";
 
 export default {
   name: "HeaderComponent",
   components: {
+    LanguageSwitcher,
     BurgerMenu,
     LogoComponent,
     HeaderNavigation,
@@ -69,8 +72,12 @@ export default {
     align-items: center;
 
     .content {
-      .header__user-entry {
-        margin-left: 100px;
+      gap: 23px;
+
+      .interface-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 23px;
       }
     }
 
@@ -81,9 +88,6 @@ export default {
 }
 
 @media (max-width: 1400px) {
-  .header__user-entry {
-    margin-left: 0 !important;
-  }
   .content {
     flex-grow: 1;
   }

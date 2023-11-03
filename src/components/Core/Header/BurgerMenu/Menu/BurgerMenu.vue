@@ -21,7 +21,8 @@
       >
         {{ $t(`pages.${page.title}`) }}
       </router-link>
-      <router-link to="dashboard">
+      <LanguageSwitcher/>
+      <router-link to="dashboard" class="user-entry__link">
         <UserEntry class="user-entry"/>
       </router-link>
     </nav>
@@ -31,10 +32,12 @@
 <script>
 import BurgerMenuButton from "components/Core/Header/BurgerMenu/Button/BurgerMenuButton";
 import UserEntry from "components/Core/Header/UserEntry/UserEntry";
+import LanguageSwitcher from "components/Core/Header/LanguageSwitcher.vue";
 
 export default {
   name: "BurgerMenu",
   components: {
+    LanguageSwitcher,
     BurgerMenuButton,
     UserEntry
   },
@@ -85,7 +88,7 @@ export default {
       margin: 10px 0;
     }
 
-    .user-entry {
+    .user-entry__link {
       margin-top: 60px;
     }
   }
