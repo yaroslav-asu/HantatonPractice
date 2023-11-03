@@ -10,7 +10,7 @@
 <script>
 import {defineComponent} from "vue";
 import FirstSection from "layouts/Main/sections/GreetingSection.vue";
-import SecondSection from "src/layouts/Main/sections/Second/SecondSection";
+import SecondSection from "layouts/Main/sections/AboutSection.vue";
 import ThirdSection from "src/layouts/Main/sections/Third/ThirdSection";
 import LastSection from "src/layouts/Main/sections/Last/LastSection";
 
@@ -27,11 +27,6 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-
-.second-section {
-  padding-top: $header-height;
-}
-
 .third-section {
   padding-top: $header-height;
 }

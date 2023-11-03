@@ -74,5 +74,5 @@ li {
 }
 
 .section {
-  height: calc(100dvh - 66px);
+  min-height: calc(100vh - 66px);
 }
