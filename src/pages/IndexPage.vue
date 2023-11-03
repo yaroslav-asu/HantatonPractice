@@ -1,33 +1,27 @@
 <template>
   <q-page>
-    <FirstSection id="greeting"/>
-    <SecondSection id="about"/>
-    <ThirdSection id="functionality"/>
-    <LastSection/>
+    <GreetingSection id="greeting"/>
+    <AboutSection id="about"/>
+    <FeaturesSection id="functionality"/>
+    <StartSection/>
   </q-page>
 </template>
 
 <script>
 import {defineComponent} from "vue";
-import FirstSection from "layouts/Main/sections/GreetingSection.vue";
-import SecondSection from "layouts/Main/sections/AboutSection.vue";
-import ThirdSection from "layouts/Main/sections/FeaturesSection.vue";
-import LastSection from "src/layouts/Main/sections/Last/LastSection";
+import GreetingSection from "layouts/Main/sections/GreetingSection.vue";
+import AboutSection from "layouts/Main/sections/AboutSection.vue";
+import FeaturesSection from "layouts/Main/sections/FeaturesSection.vue";
+import StartSection from "layouts/Main/sections/StartSection.vue";
 
 
 export default defineComponent({
   name: "MainLayout",
   components: {
-    FirstSection,
-    SecondSection,
-    ThirdSection,
-    LastSection,
+    GreetingSection,
+    AboutSection,
+    FeaturesSection,
+    StartSection,
   }
 });
 </script>
-
-<style lang="scss" scoped>
-.about-section {
-  padding-top: $header-height;
-}
-</style>
