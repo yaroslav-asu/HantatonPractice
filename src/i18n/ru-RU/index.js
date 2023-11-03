@@ -62,12 +62,12 @@ export default {
       currentLanguage: "Текущий язык"
     }
   },
-  firstSection: {
+  greetingSection: {
     thematic: "Творческий дизайн \n& Опыт",
     description: "Мы команда профессионалов в области веб-разработки и дизайна. Мы создаем сайты."
   },
   secondSection: {
-    title: "Новый сайт для вашей агентства? Это здесь!"
+    title: "Новый сайт для вашего агентства? Здесь!"
   },
   thirdSection: {
     title: "Наши возможности",
@@ -108,7 +108,7 @@ export default {
     }
   },
   learnMore: "Узнать больше",
-  more: "Больше",
+  more: "Еще",
   letsStart: "Начнем!",
   footer: {
     description: "Мы команда профессионалов в области веб-разработки и дизайна. Мы создаем сайты.",

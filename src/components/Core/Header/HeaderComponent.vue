@@ -82,7 +82,7 @@ export default {
 
 @media (max-width: 1400px) {
   .header__user-entry {
-    margin-left: 0;
+    margin-left: 0 !important;
   }
   .content {
     flex-grow: 1;
@@ -100,7 +100,5 @@ export default {
   .burger-menu {
     display: block !important;
   }
-
 }
-
 </style>

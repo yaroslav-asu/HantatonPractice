@@ -3,7 +3,6 @@ import ServiceFeatureClass from "src/js/ServiceFeatures/ServiceFeature/ServiceFe
 export default class ServiceFeatures {
   constructor(features) {
     this.prepareFeatures(features);
-    // this.features = features;
     this.currentPageIndex = 0;
     this.pages = [];
     this.splitToPages();

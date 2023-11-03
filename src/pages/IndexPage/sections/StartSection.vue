@@ -1,5 +1,5 @@
 <template>
-  <section class="section last-section">
+  <section class="section start-section">
     <div class="start-part">
       <div class="limiter">
         <div class="content">
@@ -28,13 +28,20 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.last-section {
+.start-section {
   padding-top: $header-height;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   .start-part {
     height: 100%;
+    display: flex;
+    align-items: center;
     background-image: url("assets/images/laptop.jpg");
     background-repeat: no-repeat;
+    min-height: 885px;
+    background-color: #ebebeb;
 
     .limiter {
       height: 100%;
@@ -59,9 +66,30 @@ export default {
           margin-bottom: 80px;
           font-size: 45px;
         }
-
       }
     }
+  }
+}
+
+@media (max-width: 1360px) {
+  .start-part {
+    background-image: none !important;
+    align-items: center !important;
+    display: flex;
+
+    .limiter {
+      justify-content: center !important;
+
+      .content {
+        text-align: center !important;
+        max-width: none !important;
+      }
+    }
+  }
+}
+@media (max-width: 600px) {
+  .button{
+    width: 100% !important;
   }
 }
 </style>

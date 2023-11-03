@@ -3,7 +3,7 @@
     <div class="limiter">
       <div class="wrapper">
         <div class="logo-part">
-          <LogoComponent />
+          <LogoComponent/>
           <p class="description">
             {{ $t("footer.description") }}
           </p>
@@ -171,9 +171,50 @@ export default {
         }
       }
     }
-
   }
 }
 
+@media (max-width: 1000px) {
+  .footer {
+    height: auto !important;
 
+    .wrapper {
+      flex-direction: column-reverse !important;
+      gap: 20px;
+    }
+
+    .content-part {
+      width: 100% !important;
+
+      .content {
+        width: 100% !important;
+      }
+    }
+
+    .logo-part {
+      display: flex;
+      gap: 20px;
+      width: 100% !important;
+
+      .logo {
+        margin-bottom: 0 !important;
+        flex-grow: 1;
+      }
+    }
+
+    .description {
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .content-part {
+    display: none !important;
+  }
+  .logo-part {
+    align-items: center !important;
+    flex-direction: column-reverse !important;
+  }
+}
 </style>

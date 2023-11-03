@@ -41,19 +41,27 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.content{
+.content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;
+  gap: 25px;
 }
-.text{
+
+.text {
   color: $light;
-  margin-bottom: 25px;
   font-size: 18px;
 }
-.icon{
+
+.icon {
   font-size: 50px;
+}
+
+@media (max-width: 600px) {
+  .content {
+    flex-direction: row !important;
+  }
 }
 </style>

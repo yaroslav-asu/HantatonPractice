@@ -21,7 +21,9 @@
       >
         {{ $t(`pages.${page.title}`) }}
       </router-link>
-      <UserEntry class="user-entry"/>
+      <router-link to="dashboard">
+        <UserEntry class="user-entry"/>
+      </router-link>
     </nav>
   </div>
 </template>
@@ -86,9 +88,6 @@ export default {
     .user-entry {
       margin-top: 60px;
     }
-
   }
-
 }
-
 </style>
