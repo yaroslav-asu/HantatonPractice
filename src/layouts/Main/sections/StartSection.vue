@@ -64,7 +64,6 @@ export default {
           margin-bottom: 80px;
           font-size: 45px;
         }
-
       }
     }
   }

@@ -29,6 +29,6 @@ export default {
 .logo-text {
   font-size: 1.5rem;
   margin-left: 10px !important;
+  white-space: nowrap;
 }
-
 </style>
