@@ -1,46 +1,46 @@
 const routes = [
   {
     path: "/",
-    component: () => import("layouts/Main/MainLayout.vue"),
+    component: () => import("layouts/MainLayout.vue"),
     children: [
-      { path: "", component: () => import("pages/IndexPage.vue") }
+      { path: "", component: () => import("pages/IndexPage/IndexPage.vue") }
     ]
   },
   {
     path: "/settings",
-    component: () => import("layouts/App/AppLayout.vue"),
+    component: () => import("layouts/AppLayout.vue"),
     children: [
       { path: "", component: () => import("pages/App/SettingsPage.vue") }
     ]
   },
   {
     path: "/dashboard",
-    component: () => import("layouts/App/AppLayout.vue"),
+    component: () => import("layouts/AppLayout.vue"),
     children: [
       { path: "", component: () => import("pages/App/DashboardPage.vue") }
     ]
   },
   {
     path: "/profile",
-    component: () => import("layouts/App/AppLayout.vue"),
+    component: () => import("layouts/AppLayout.vue"),
     children: [
       { path: "", component: () => import("pages/App/ProfilePage.vue") }
     ]
   },
   {
     path: "/user-card/:id",
-    component: () => import("layouts/App/AppLayout.vue"),
+    component: () => import("layouts/AppLayout.vue"),
     children: [
       { path: "", component: () => import("pages/App/UserCardPage.vue") }
     ]
   },
   {
     path: "/login",
-    component: () => import("layouts/Auth/Auth.vue")
+    component: () => import("layouts/Auth.vue")
   },
   {
     path: "/register",
-    component: () => import("layouts/Auth/Auth.vue")
+    component: () => import("layouts/Auth.vue")
   },
   {
     path: "/:catchAll(.*)*",

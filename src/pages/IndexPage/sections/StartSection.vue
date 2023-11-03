@@ -36,6 +36,8 @@ export default {
 
   .start-part {
     height: 100%;
+    display: flex;
+    align-items: center;
     background-image: url("assets/images/laptop.jpg");
     background-repeat: no-repeat;
     min-height: 885px;

@@ -85,7 +85,7 @@
     <div class="bc-block">
       <img
         class="user_entry-img"
-        src="~assets/images/UserEntry.svg"
+        src="../assets/images/UserEntry.svg"
         alt=""
       />
     </div>
@@ -93,7 +93,7 @@
 </template>
 
 <script>
-import LogoComponent from "components/Core/Logo/LogoComponent";
+import LogoComponent from "components/Core/Logo/LogoComponent.vue";
 import { validationMixin } from "src/js/validation";
 
 export default {

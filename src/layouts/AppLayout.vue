@@ -51,8 +51,8 @@
 </template>
 
 <script>
-import UserEntry from "components/Core/Header/UserEntry/UserEntry";
-import LogoComponent from "components/Core/Logo/LogoComponent";
+import UserEntry from "components/Core/Header/UserEntry/UserEntry.vue";
+import LogoComponent from "components/Core/Logo/LogoComponent.vue";
 
 export default {
   name: "ProfilePage",
