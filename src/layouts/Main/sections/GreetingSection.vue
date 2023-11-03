@@ -35,13 +35,15 @@ export default {
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: min(65%, 1000px);
+  display: flex;
+  flex-direction: column;
 
   .limiter {
-    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    flex-grow: 1;
 
     .content_wrapper {
       width: 60%;

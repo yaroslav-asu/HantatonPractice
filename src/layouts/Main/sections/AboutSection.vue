@@ -77,18 +77,6 @@ export default {
       flex-direction: column;
       align-items: center;
     }
-  }
-}
-
-@media (max-width: 1000px) {
-  .limiter {
-    grid-gap: 20px;
-    grid-template-columns: 60% 40% !important;
-
-    .category-title {
-      grid-column: 1/3;
-      text-align: center;
-    }
 
     .photo-wrapper {
       grid-column: 2;
@@ -117,16 +105,32 @@ export default {
         }
       }
     }
+  }
+}
+
+@media (max-width: 1000px) {
+  .limiter {
+    grid-gap: 20px;
+    grid-template-columns: 60% 40% !important;
+
+    .category-title {
+      grid-column: 1/3;
+      grid-row: 1;
+      text-align: center;
+    }
 
     .pros {
       grid-row: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
     .photo-wrapper {
-      grid-row: 2;
+      grid-row: 2 !important;
 
       .photo-substrate {
-        width: 70%;
+        width: 70% !important;
       }
     }
   }
@@ -139,7 +143,7 @@ export default {
     align-items: center;
 
     .photo-wrapper {
-      display: none;
+      display: none !important;
     }
   }
 }
