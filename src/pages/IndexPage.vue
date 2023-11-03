@@ -11,7 +11,7 @@
 import {defineComponent} from "vue";
 import FirstSection from "layouts/Main/sections/GreetingSection.vue";
 import SecondSection from "layouts/Main/sections/AboutSection.vue";
-import ThirdSection from "src/layouts/Main/sections/Third/ThirdSection";
+import ThirdSection from "layouts/Main/sections/FeaturesSection.vue";
 import LastSection from "src/layouts/Main/sections/Last/LastSection";
 
 
@@ -27,7 +27,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-.third-section {
+.about-section {
   padding-top: $header-height;
 }
 </style>

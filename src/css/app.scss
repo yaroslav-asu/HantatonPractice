@@ -48,6 +48,17 @@ h1 {
   color: $text-color;
 }
 
+@media (max-width: 600px) {
+  h1 {
+    font-size: 60px;
+    line-height: 75px;
+  }
+  h2 {
+    font-size: 50px !important;
+    line-height: 60px !important;
+  }
+}
+
 h2 {
   font-size: 70px;
   line-height: 90px;

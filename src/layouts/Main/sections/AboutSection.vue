@@ -147,11 +147,4 @@ export default {
     }
   }
 }
-
-@media (max-width: 600px) {
-  .category-title {
-    font-size: 50px;
-    line-height: 60px;
-  }
-}
 </style>

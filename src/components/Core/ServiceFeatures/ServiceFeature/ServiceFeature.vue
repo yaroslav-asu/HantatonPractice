@@ -1,6 +1,7 @@
 <template>
   <div class="service-feature">
     <IconComponent
+      class="icon-component"
       :name="serviceFeature.icon"
       :color="serviceFeature.iconColor"
     />
@@ -39,7 +40,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.service-feature{
+.service-feature {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -48,8 +49,31 @@ export default {
   padding: 40px;
   aspect-ratio: 1;
 }
-.category-title{
+
+.category-title {
   margin-bottom: 8px;
   line-height: normal;
+}
+
+@media (max-width: 600px) {
+  .service-feature {
+    align-items: center !important;
+  }
+}
+</style>
+<style lang="scss">
+@media (max-width: 1000px) {
+  .service-feature {
+    .icon-component {
+      background: none !important;
+      box-shadow: none !important;
+      padding: 0 !important;
+      padding-bottom: 20px !important;
+
+      .icon {
+        font-size: 140px !important;
+      }
+    }
+  }
 }
 </style>

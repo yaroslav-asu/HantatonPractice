@@ -96,11 +96,6 @@ export default {
 }
 
 @media (max-width: 600px) {
-
-  .site-thematic {
-    font-size: 60px;
-    line-height: 75px;
-  }
   .button {
     width: 100% !important;
   }
