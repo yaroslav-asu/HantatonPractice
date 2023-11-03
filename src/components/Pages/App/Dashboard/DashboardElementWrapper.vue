@@ -48,7 +48,6 @@ export default {
     iconColor: {
       type: String
     },
-
   }
 };
 </script>
@@ -86,6 +85,8 @@ export default {
   }
   .content{
     flex-grow: 1;
+    display: flex;
+    align-items: center;
   }
 }
 </style>

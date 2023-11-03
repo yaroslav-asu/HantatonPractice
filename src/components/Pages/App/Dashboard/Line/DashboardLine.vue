@@ -47,5 +47,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
+.dashboard-bar-chart{
+  width:100%;
+}
 </style>

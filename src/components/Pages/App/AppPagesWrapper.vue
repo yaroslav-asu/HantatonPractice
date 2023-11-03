@@ -1,7 +1,7 @@
 <template>
-  <q-page class="settings-page ">
+  <q-page class="app-page">
     <div class="wrapper" :style="wrapperStyle">
-      <slot />
+      <slot/>
     </div>
   </q-page>
 </template>
@@ -18,7 +18,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.settings-page {
+.app-page {
   height: 100vh;
   padding: 20px;
 

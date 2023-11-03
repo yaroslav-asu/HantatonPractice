@@ -52,7 +52,7 @@ export default {
 .top-image {
   height: 25%;
   width: 100%;
-  background-image: url("src/assets/images/accoutnTemplateGradient.jpeg");
+  background-image: url("src/assets/images/accountTemplateGradient.jpeg");
   background-repeat: no-repeat;
   background-position: 70% 50%;
   background-size: cover;

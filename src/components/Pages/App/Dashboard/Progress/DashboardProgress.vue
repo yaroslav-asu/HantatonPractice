@@ -65,14 +65,8 @@ export default {
 .progress-wrapper {
   display: flex;
   justify-content: space-between;
+  flex-grow: 1;
   align-items: center;
-
-  .progress {
-    margin-right: 10px;
-  }
-
-  .percentage {
-
-  }
+  gap: 10px;
 }
 </style>

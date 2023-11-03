@@ -28,6 +28,10 @@ export default {
       4: {
         title: "Testing",
         description: "Website testing"
+      },
+      additional: {
+        title: "Progress",
+        description: "You can see the progress of your project here"
       }
     },
     pie: {

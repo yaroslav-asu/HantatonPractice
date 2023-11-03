@@ -88,7 +88,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.settings-page {
+.app-page {
   height: 100vh;
   padding: 20px;
 

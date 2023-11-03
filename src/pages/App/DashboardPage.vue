@@ -1,44 +1,55 @@
 <template>
   <q-page>
     <AppPagesWrapper
-      class="wrapper"
-      :wrapperStyle="{
-        padding: '25px'
-      }"
     >
-      <div class="col-wrapper four-cols">
-        <DashboardProgress
-          v-for="(image,index) in progressImages"
-          :key="image"
-          :title="$t(`dashboard.progress.${index + 1}.title`)"
-          :description="$t(`dashboard.progress.${index + 1}.description`)"
-          :iconName="image"
-          :color="colors[index]"
-          :value="Math.random()"
-        />
-      </div>
-      <div class="blocks_wrapper">
-        <DashboardPie
-          :title="$t('dashboard.pie.title')"
-          :data-set="pieDataSet"
-          :colors="colors"
-          class="pie"
-        />
-        <div class="col">
-          <DashboardBar
-            :title="$t('dashboard.bar.title')"
-            :description="$t('dashboard.bar.description')"
-            :data-set="[]"
-            :color="colors[0]"
-          />
-          <DashboardLine
-            :title="$t('dashboard.line.title')"
-            :description="$t('dashboard.line.description')"
-            :data-set="[]"
-            :color="colors[0]"
+      <header class="dashboard-header">
+        <h2>Dashboard</h2>
+      </header>
+      <div class="content">
+        <div class="col-wrapper four-cols">
+          <DashboardProgress
+            v-for="(image,index) in progressImages"
+            :key="image"
+            :title="$t(`dashboard.progress.${index + 1}.title`)"
+            :description="$t(`dashboard.progress.${index + 1}.description`)"
+            :iconName="image"
+            :color="colors[index]"
+            :value="Math.random()"
           />
         </div>
+        <div class="blocks_wrapper">
+          <div class="col">
+            <DashboardPie
+              :title="$t('dashboard.pie.title')"
+              :data-set="pieDataSet"
+              :colors="colors"
+              class="pie"
+            />
+            <DashboardProgress
+              :title="$t('dashboard.progress.additional.title')"
+              :description="$t('dashboard.progress.additional.description')"
+              color="#59C3C3"
+              class="additional-progress"
+              icon-name="select_all"
+            />
+          </div>
+          <div class="col-2">
+            <DashboardBar
+              :title="$t('dashboard.bar.title')"
+              :description="$t('dashboard.bar.description')"
+              :data-set="[]"
+              :color="colors[0]"
+            />
+            <DashboardLine
+              :title="$t('dashboard.line.title')"
+              :description="$t('dashboard.line.description')"
+              :data-set="[]"
+              :color="colors[0]"
+            />
+          </div>
+        </div>
       </div>
+
     </AppPagesWrapper>
   </q-page>
 </template>
@@ -101,8 +112,26 @@ export default {
   @return repeat($columns, calc(100% / #{$columns} - 20px * calc((#{$columns} - 1) / #{$columns})));
 }
 
+.dashboard-header {
+  position: relative;
+  background-image: url("src/assets/images/accountTemplateGradient.jpeg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px 20px 0 0;
+  padding: 50px 20px 50px 20px;
+
+  h2 {
+    color: white;
+  }
+}
+
+.content {
+  padding: 20px;
+  overflow: auto;
+}
+
 .col-wrapper {
-  margin: 20px 0;
+  margin-bottom: 20px;
   display: grid;
   grid-gap: 15px;
 }
@@ -124,11 +153,19 @@ export default {
   flex-wrap: nowrap;
   gap: 20px;
 
-  .pie {
-    width: 60%;
+  .col {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .additional-progress {
+      width: 100%;
+      flex-grow: 1;
+    }
   }
 
-  .col {
+
+  .col-2 {
     display: flex;
     flex-direction: column;
     gap: 20px;
