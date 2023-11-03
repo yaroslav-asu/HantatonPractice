@@ -74,5 +74,5 @@ li {
 }
 
 .section {
-  height: max(100vh, 900px);
+  height: calc(100dvh - 66px);
 }

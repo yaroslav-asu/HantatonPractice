@@ -9,7 +9,7 @@
 
 <script>
 import {defineComponent} from "vue";
-import FirstSection from "src/layouts/Main/sections/First/FirstSection.vue";
+import FirstSection from "layouts/Main/sections/GreetingSection.vue";
 import SecondSection from "src/layouts/Main/sections/Second/SecondSection";
 import ThirdSection from "src/layouts/Main/sections/Third/ThirdSection";
 import LastSection from "src/layouts/Main/sections/Last/LastSection";

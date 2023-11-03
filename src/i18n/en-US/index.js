@@ -62,7 +62,7 @@ export default {
       currentLanguage: "Current language"
     }
   },
-  firstSection: {
+  greetingSection: {
     thematic: "Creative Design \n& Experience",
     description: "We are a team of professionals in the field of web development and design. We create websites."
   },
