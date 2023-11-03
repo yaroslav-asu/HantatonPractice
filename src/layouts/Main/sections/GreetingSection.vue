@@ -79,6 +79,9 @@ export default {
 @media (max-width: 750px) {
   .greeting-section {
     background: none !important;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
 
     .content_wrapper {
       text-align: center;
@@ -91,6 +94,7 @@ export default {
 }
 
 @media (max-width: 600px) {
+
   .site-thematic {
     font-size: 60px;
     line-height: 75px;
