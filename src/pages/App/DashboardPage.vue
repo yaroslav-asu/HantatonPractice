@@ -103,9 +103,7 @@ export default {
 
 <style lang="scss" scoped>
 $gap: 20px;
-@function get-column($columns) {
-  @return repeat($columns, calc(100% / #{$columns} - #{$gap} * calc((#{$columns} - 1) / #{$columns})));
-}
+
 
 .content {
   padding: 20px;
@@ -116,7 +114,7 @@ $gap: 20px;
   margin-bottom: 20px;
   display: grid;
   grid-gap: $gap;
-  grid-template-columns: get-column(4);
+  grid-template-columns: get-column(4, $gap);
 }
 
 .blocks-wrapper {
@@ -145,7 +143,7 @@ $gap: 20px;
 
 @media (max-width: 1050px) {
   .col-wrapper {
-    grid-template-columns: get-column(2);
+    grid-template-columns: get-column(2, $gap);
   }
 }
 
@@ -166,7 +164,7 @@ $gap: 20px;
 
 @media (max-width: 650px) {
   .col-wrapper {
-    grid-template-columns: get-column(1);
+    grid-template-columns: get-column(1, $gap);
   }
 }
 </style>

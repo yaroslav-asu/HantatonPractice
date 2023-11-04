@@ -42,9 +42,23 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+$gap: 10px;
 .content{
   display: grid;
-  grid-template-columns: repeat(3, calc(100% / 3 - 30px / 3));
-  grid-gap: 10px;
+  grid-template-columns: get-column(3, $gap);
+  grid-gap: $gap;
+}
+@media (max-width: 1024px) {
+  .content{
+    grid-template-columns: get-column(2, $gap);
+  }
+}
+@media (max-width: 768px) {
+  .content{
+    grid-template-columns: get-column(1, $gap);
+  }
+}
+@media (max-width: 600px) {
+
 }
 </style>

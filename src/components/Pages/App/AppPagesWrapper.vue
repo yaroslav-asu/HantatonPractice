@@ -21,6 +21,7 @@ export default {
 .app-page {
   min-height: auto !important;
   height: 100%;
+
   .wrapper {
     border-radius: 20px;
     height: 100%;

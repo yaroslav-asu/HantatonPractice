@@ -20,3 +20,7 @@ $lite-shadow: 0px 0px 300px -20px $grey;
 $lite-shadow-1: 0px 0px 300px -20px rgba($dark, 0.12);
 $lite-shadow-2: 0px 0px 300px -20px rgba($dark, 0.32);
 $header-height: 66px;
+
+@function get-column($columns, $gap) {
+  @return repeat($columns, calc(100% / #{$columns} - #{$gap} * calc((#{$columns} - 1) / #{$columns})));
+}
