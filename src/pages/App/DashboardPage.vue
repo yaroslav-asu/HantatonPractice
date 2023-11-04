@@ -12,8 +12,8 @@
           :value="Math.random()"
         />
       </div>
-      <div class="blocks_wrapper">
-        <div class="col">
+      <div class="blocks-wrapper">
+        <div class="blocks-col blocks-col--first">
           <DashboardPie
             :title="$t('dashboard.pie.title')"
             :data-set="pieDataSet"
@@ -29,7 +29,7 @@
             :value="Math.random()"
           />
         </div>
-        <div class="col-2">
+        <div class="blocks-col blocks-col--second">
           <DashboardBar
             :title="$t('dashboard.bar.title')"
             :description="$t('dashboard.bar.description')"
@@ -102,8 +102,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+$gap: 20px;
 @function get-column($columns) {
-  @return repeat($columns, calc(100% / #{$columns} - 15px * calc((#{$columns} - 1) / #{$columns})));
+  @return repeat($columns, calc(100% / #{$columns} - #{$gap} * calc((#{$columns} - 1) / #{$columns})));
 }
 
 .content {
@@ -114,42 +115,58 @@ export default {
 .col-wrapper {
   margin-bottom: 20px;
   display: grid;
-  grid-gap: 15px;
-}
-
-.two-cols {
-  grid-template-columns: get-column(2);
-}
-
-.three-cols {
-  grid-template-columns: get-column(3);
-}
-
-.four-cols {
+  grid-gap: $gap;
   grid-template-columns: get-column(4);
 }
 
-.blocks_wrapper {
+.blocks-wrapper {
   display: flex;
   flex-wrap: nowrap;
-  gap: 20px;
+  gap: $gap;
 
-  .col {
+  .blocks-col {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: $gap;
 
-    .additional-progress {
-      width: 100%;
-      flex-grow: 1;
+    &--first {
+      width: 60%;
+
+      .additional-progress {
+        flex: 1;
+      }
+    }
+
+    &--second {
+      width: 40%;
     }
   }
+}
 
+@media (max-width: 1050px) {
+  .col-wrapper {
+    grid-template-columns: get-column(2);
+  }
+}
 
-  .col-2 {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+@media (max-width: 767px) {
+  .blocks-col {
+    &--first {
+      width: 100% !important;
+    }
+
+    &--second {
+      width: 100% !important;
+    }
+  }
+  .blocks-wrapper {
+    flex-direction: column-reverse;
+  }
+}
+
+@media (max-width: 650px) {
+  .col-wrapper {
+    grid-template-columns: get-column(1);
   }
 }
 </style>
