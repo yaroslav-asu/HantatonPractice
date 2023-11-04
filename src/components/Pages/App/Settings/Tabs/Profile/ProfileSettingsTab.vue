@@ -30,7 +30,6 @@ export default {
     SettingsTab,
     SettingsInputSection
   }
-
 };
 </script>
 

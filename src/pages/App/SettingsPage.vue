@@ -161,8 +161,37 @@ export default {
       }
     }
   }
-
 }
 
 
+</style>
+<style lang="scss">
+.app-page {
+
+  @media (max-width: 1024px) {
+    .settings_section__content {
+      margin-right: 0 !important;
+      width: 60% !important;
+    }
+  }
+  @media (max-width: 768px) {
+    .settings_section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+
+      .settings_section__content {
+        width: 100% !important;
+      }
+    }
+    .password-tab_btn-section {
+      justify-content: center;
+    }
+    .q-field__bottom {
+      padding-right: 0;
+      text-align: center;
+    }
+  }
+}
 </style>

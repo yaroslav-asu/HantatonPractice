@@ -21,7 +21,7 @@ export default {
 <style lang="scss" scoped>
 .app {
   width: 100vw;
-  height: max(100vh, 600px);
+  height: max(100dvh, 600px);
 
   .limiter {
     height: 100%;
