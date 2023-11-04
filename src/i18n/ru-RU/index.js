@@ -26,7 +26,7 @@ export default {
         description: "Разработка сайта",
       },
       4: {
-        title: "Тестирование",
+        title: "Тесты",
         description: "Тестирование сайта",
       },
       additional: {

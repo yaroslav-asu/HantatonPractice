@@ -7,7 +7,7 @@
     <SettingsSelectSection
       :title="$t('settings.language.currentLanguage')"
       v-model="model"
-      :options="languageSwitcher.options"
+      :options="languageSwitcher.languages"
     />
   </SettingsTab>
 </template>

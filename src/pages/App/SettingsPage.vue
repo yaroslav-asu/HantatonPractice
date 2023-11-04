@@ -44,7 +44,6 @@
       </q-tab-panel>
     </q-tab-panels>
   </AppPageTemplate>
-
 </template>
 
 <script>
