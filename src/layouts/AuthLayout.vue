@@ -6,7 +6,7 @@
         @submit.prevent="onSubmit"
         ref="form"
       >
-        <LogoComponent class="logo" />
+        <LogoComponent class="logo"/>
         <q-input
           v-model="email"
           class="full-width q-mb-md"
@@ -14,7 +14,7 @@
           :rules="emailRule"
         >
           <template v-slot:append>
-            <q-icon name="o_person" />
+            <q-icon name="o_person"/>
           </template>
         </q-input>
         <q-input
@@ -44,7 +44,7 @@
             />
           </template>
         </q-input>
-        <div class="flex justify-between items-center q-my-lg">
+        <div class="remember-row flex justify-between items-center q-my-lg">
           <q-checkbox
             v-model="remember"
             :label="$t('rememberMe')"
@@ -94,7 +94,7 @@
 
 <script>
 import LogoComponent from "components/Core/Logo/LogoComponent.vue";
-import { validationMixin } from "src/js/validation";
+import {validationMixin} from "src/js/validation";
 
 export default {
   name: "LogRegWrapper",
@@ -117,7 +117,7 @@ export default {
     };
   },
   methods: {
-    onSubmit(){
+    onSubmit() {
       this.$router.push("/dashboard");
     }
   },
@@ -178,6 +178,31 @@ export default {
       top: 5%;
       rotate: -15deg;
     }
+  }
+}
+
+@media (max-width: 1024px) {
+  .form-part {
+    width: 100% !important;
+  }
+  .bc-block {
+    display: none;
+  }
+  .button {
+    width: 100% !important;
+  }
+  .help-text {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .remember-row {
+    flex-direction: column;
+    margin-top: 0 !important;
+  }
+  .from {
+    width: 80% !important;
   }
 }
 </style>
