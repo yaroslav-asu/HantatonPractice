@@ -133,7 +133,7 @@ $transitionFunction: ease;
     border-radius: 20px;
     box-sizing: content-box;
     position: relative;
-    transition: all $transitionTime $transitionFunction;
+    transition: width $transitionTime $transitionFunction;
 
     .dense-navigation_button {
       border-radius: 50%;
@@ -242,6 +242,13 @@ $transitionFunction: ease;
     padding: inherit;
     padding-right: 0;
     z-index: 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .navigation-wrapper{
+    border-bottom-right-radius: 0 !important;
+    border-top-right-radius: 0 !important;
   }
 }
 </style>

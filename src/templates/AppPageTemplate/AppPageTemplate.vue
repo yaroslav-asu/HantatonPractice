@@ -56,7 +56,9 @@ export default {
   background-repeat: no-repeat;
   background-position: 70% 50%;
   background-size: cover;
-  border-radius: 20px 20px 0 0;
+  border-radius: inherit;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   overflow: hidden;
 }
 
@@ -66,8 +68,8 @@ export default {
   padding: 0 40px 30px;
   display: flex;
   flex-direction: column;
-
   flex-grow: 1;
+
   .top-part {
     display: flex;
     align-items: center;
@@ -129,7 +131,7 @@ export default {
       height: 100px !important;
     }
   }
-  .top-image{
+  .top-image {
     height: 17% !important;
   }
 }

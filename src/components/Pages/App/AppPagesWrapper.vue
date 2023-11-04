@@ -31,4 +31,10 @@ export default {
     box-shadow: $lite-shadow-1;
   }
 }
+@media (max-width: 768px) {
+  .wrapper{
+   border-bottom-left-radius: 0 !important;
+    border-top-left-radius: 0 !important;
+  }
+}
 </style>
