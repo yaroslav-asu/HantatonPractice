@@ -1,7 +1,7 @@
 <template>
   <div class="logo">
     <img src="~/assets/logo-round.png" alt="logo" class="logo-image"/>
-    <p class="logo-text">
+    <p class="logo-text" v-if="!dense">
       & Exp
     </p>
   </div>
@@ -9,7 +9,10 @@
 
 <script>
 export default {
-  name: "LogoComponent"
+  name: "LogoComponent",
+  props: {
+    dense: Boolean
+  }
 };
 </script>
 

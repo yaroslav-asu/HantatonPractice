@@ -18,9 +18,10 @@
       />
     </div>
     <div class="wrapper" v-else>
-      <UserImage class="user-image-wrapper" />
+      <UserImage class="user-image-wrapper"/>
       <p
-        class=""
+        v-if="!dense"
+        class="user-email"
         :style="{
             fontSize: emailSize,
         }"
@@ -63,7 +64,8 @@ export default {
     emailSize: {
       type: String,
       default: "20px"
-    }
+    },
+    dense: Boolean
   },
   data() {
     return {
@@ -99,11 +101,11 @@ export default {
   align-items: center;
   cursor: pointer;
   position: relative;
+  gap: 15px;
 
   .user-image-wrapper {
     width: 50px;
     height: 50px;
-    margin-right: 15px;
   }
 }
 </style>

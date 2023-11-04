@@ -10,7 +10,7 @@
         {{ description }}
       </p>
     </section>
-    <slot />
+    <slot/>
     <section
       class="password-tab_btn-section"
       v-if="buttons"

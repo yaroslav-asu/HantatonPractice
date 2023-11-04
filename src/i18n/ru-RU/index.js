@@ -5,7 +5,7 @@ export default {
     howItWorks: "Как это работает",
     team: "Команда",
     settings: "Настройки",
-    dashboard: "Панель управления",
+    dashboard: "Дэшборд",
     profile: "Профиль",
     logout: "Выйти",
     about: "О нас",

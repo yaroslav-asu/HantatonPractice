@@ -19,9 +19,8 @@ export default {
 
 <style lang="scss" scoped>
 .app-page {
-  height: 100vh;
-  padding: 20px;
-
+  min-height: auto !important;
+  height: 100%;
   .wrapper {
     border-radius: 20px;
     height: 100%;

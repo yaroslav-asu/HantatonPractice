@@ -16,7 +16,7 @@
         :name="tab.name"
         :label="tab.label"
       />
-      <q-separator class="separator" />
+      <q-separator class="separator"/>
     </q-tabs>
     <q-tab-panels
       v-model="activeTab"
@@ -28,19 +28,19 @@
         name="password"
         class="tab-panel"
       >
-        <PasswordSettingsTab />
+        <PasswordSettingsTab/>
       </q-tab-panel>
       <q-tab-panel
         name="profile"
         class="tab-panel"
       >
-        <ProfileSettingsTab />
+        <ProfileSettingsTab/>
       </q-tab-panel>
       <q-tab-panel
         name="language"
         class="tab-panel"
       >
-        <LanguageSettingsTab />
+        <LanguageSettingsTab/>
       </q-tab-panel>
     </q-tab-panels>
   </AppPageTemplate>
@@ -89,9 +89,6 @@ export default {
 
 <style lang="scss" scoped>
 .app-page {
-  height: 100vh;
-  padding: 20px;
-
   .wrapper {
     border-radius: 20px;
     height: 100%;

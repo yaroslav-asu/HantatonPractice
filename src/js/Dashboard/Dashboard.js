@@ -11,11 +11,11 @@ function hslToHex(h, s, l) {
 
 function colors(count) {
   let colors = [];
-  let candidatesCount = count;
-  for (let hue = 0; hue < candidatesCount; hue++) {
-    colors.push(hslToHex(hue * 360 / candidatesCount, 75, 65));
+  for (let hue = 0; hue < count; hue++) {
+    colors.push(hslToHex(hue * 360 / count, 91, 69));
   }
+  colors[count - 1] = '#6f6af8'
   return colors.reverse();
 }
 
-export { colors };
+export {colors};
